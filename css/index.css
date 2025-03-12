@@ -1,10 +1,107 @@
 @font-face {
-    font-family: 'MyHelveticaNeue'; /* Choose a name */
-    src: url('fonts/HelveticaNeue.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
+    font-family: 'HelveticaNeue';
+    src: url('font/HelveticaNeue.woff2') format('woff2'),
+         url('font/HelveticaNeue.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('font/HelveticaNeueLight.woff2') format('woff2'),
+         url('font/HelveticaNeueLight.otf') format('opentype');
+    font-weight: lighter;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased; /* Smooth fonts */
+    -moz-osx-font-smoothing: grayscale;
+    /* outline: 1px solid red; */
+}
   
-html, body {
-    font-family: 'MyHelveticaNeue', sans-serif;
+html{
+    font-size: 16px; /* Ensures rem units are predictable */
+}
+body {
+    margin:0;
+    padding:0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ////////////////// */
+/* Navigation section */
+/* ////////////////// */
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85vw;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    overflow: hidden;
+}
+
+.header-left img {
+    position: relative;
+    top: -1.1rem;
+    height: 50%;
+    width: 50%;
+}
+
+.navigation {
+    position: relative;
+    top: -1.1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 3rem; /* Spacing between nav links */
+}
+
+.navigation a {
+    font-family: 'HelveticaNeue', sans-serif;
+    color: white; 
+    text-decoration: none;
+    font-size: 1.1rem; 
+    font-weight: lighter;
+    /* Removed margin-left and max-width to avoid cutting off text */
+}
+
+.navigation .industriesandpartners {
+    top: -1.3rem;
+     position: relative;
+}
+
+@media (max-width: 600px) {
+    .navigation {
+        gap: 1rem; /* Reduce spacing on smaller screens if needed */
+    }
+
+    .navigation a {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* //////////// */
+/* Hero Section */
+/* //////////// */
+.hero-section{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.hero-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
 }
