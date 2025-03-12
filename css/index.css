@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'MyHelveticaNeue'; /* Choose a name */
+    src: url('fonts/HelveticaNeue.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+html, body {
+    font-family: 'MyHelveticaNeue', sans-serif;
+}
