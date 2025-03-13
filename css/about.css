@@ -1,0 +1,406 @@
+@font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url('../font/HelveticaNeueMedium.woff2') format('woff2'),
+         url('../font/HelveticaNeueMedium.otf') format('opentype');
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../font/HelveticaNeueLight.woff2') format('woff2'),
+         url('../font/HelveticaNeueLight.otf') format('opentype');
+    font-weight: 300;
+  }
+
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('../font/HelveticaNeueBold.woff2') format('woff2'),
+         url('../font/HelveticaNeueBold.otf') format('opentype');
+    font-weight: 700;
+}
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased; /* Smooth fonts */
+    -moz-osx-font-smoothing: grayscale;
+    /* outline: 1px solid red; */
+  }
+    
+  html {
+    font-size: 16px; /* Base for rem units if needed */
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  html, body {
+    height: 100%;
+  }
+  
+  /* ////////////////// */
+  /* Navigation section */
+  /* ////////////////// */
+  header {
+    position: absolute;
+    top: -24.5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 83vw;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    overflow-x: hidden;
+  }
+  
+  /* 
+    Assuming a 1920px width, -1.1rem (~17.6px) is roughly 0.9vw.
+    Adjust the value if needed.
+  */
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 50%;
+  }
+  
+  .navigation {
+    position: relative;
+    top: -1vw;  /* -1vw approximates the -1.1rem offset */
+    display: flex;
+    flex-wrap: nowrap;
+    /* 3rem ≈ 48px => about 2.5vw on a 1920px width */
+    gap: 2.5vw;
+  }
+  
+  .navigation a {
+    font-family: 'HelveticaNeueLight', sans-serif; /* Updated font family */
+    color: #000;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-weight: normal; /* Use normal weight for the light font */
+  }
+
+  /* Style for the active "HOME" link */
+  .navigation .aboutus {
+    color: #27C83F; /* Green color */
+    font-weight: bold;
+  }
+
+  /* Underline Effect */
+  .navigation .aboutus::after {
+    content: "";
+    display: block;
+    width: 5vw;
+    height: 2px;
+    background-color: #27C83F;
+    position: absolute;
+    top: 2.6vh;
+    left: 15%;
+  }
+    
+  .navigation .industriesandpartners {
+    position: relative;
+    /* -1.3rem (~20.8px) ≈ 1vw */
+    top: -1vw;
+  }
+  
+  @media (max-width: 600px) {
+    .navigation {
+      /* 1rem ≈ 16px → roughly 0.8vw on a 1920px design; adjust if needed */
+      gap: clamp(0.8rem, 1vw, 1rem);
+    }
+    
+    .navigation a {
+      font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+    }
+  }
+
+/* ////////// */
+/* p1 Section */
+/* ////////// */
+.p1{
+    margin-top: 25vh;
+    height: 75vh;
+}
+
+.p1-image {
+    width: 60vw;
+    margin: 15vh auto auto auto;
+    position: relative; /* Establishes the positioning context */
+    overflow: hidden;
+    text-align: center;
+}
+
+.p1-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container */
+  display: block;
+}
+
+.p1-title {
+    z-index: 4;
+    font-family: 'HelveticaNeueBold', sans-serif;
+    color: #27C83F;
+    font-size: 3.2vw;
+    margin:1.5vh auto;
+    width: 60vw;
+    position: absolute;
+    text-align: left;
+    left: 20%;
+    top: -2.5vh;
+}
+
+.p1-title .black-title{
+    color: black;
+}
+
+.p1-title .title-paragraph{
+    position: relative;
+    z-index: 5;
+    width: 18.44vw;
+    height: 6.39vh;
+    color: black;
+    font-size: 1.042vw;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.p1-paragraph {
+    position: absolute;
+    bottom: 6.5vh;  
+    right: 3.5vw;   
+    z-index: 5;
+    text-align: left;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 0.938vw;
+    line-height: 1.3;
+    width: 18.44vw;  
+    word-wrap: break-word;
+}
+
+/* ////////// */
+/* p2 Section */
+/* ////////// */
+
+.p2-left{
+    position: relative;
+    text-align: left;
+    margin-left: 20vw;
+    margin-top:5vh;
+    padding-bottom: 15vh;
+}
+
+.p2-title-left{
+    position:relative;
+    color: #27C83F;
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-weight: 700;
+    font-size: 1.1vw;
+    line-height: 22px; letter-spacing: 0.22px;
+    margin-bottom: 0.5vh;
+    padding-left: 1.5vw;
+}
+
+.p2-title-left::before{
+    content: "";
+    position: absolute;
+    left: 0vw;
+    top: 3.4vh;
+    bottom: 0;
+    width: 0.157vw;           /* adjust thickness as needed */
+    height: 3.49vw;
+    background-color: currentColor; /* so it follows text color */
+    margin: auto;         /* vertically centered */
+    
+}
+
+.p2-paragraph{
+    position: relative;
+    color: black;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
+    font-size:0.938vw;
+    word-wrap: break-word;
+    width:24.688vw;
+    letter-spacing: 0.18px;
+    padding-left: 1.5vw;
+}
+
+.p2-title-right{
+    position:relative;
+    top: -9.5vh;
+    color: #27C83F;
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-weight: 700;
+    font-size: 1.1vw;
+    line-height: 22px; letter-spacing: 0.22px;
+    margin-bottom: 0.5vh;
+    padding-left: 1.5vw;
+    margin-left: 29vw;
+}
+
+.p2-title-right::before{
+    content: "";
+    position: absolute;
+    left: 0vw;
+    top: 6.9vh;
+    bottom: 0;
+    width: 0.157vw;           /* adjust thickness as needed */
+    height: 6.875vw;
+    background-color: currentColor; /* so it follows text color */
+    margin: auto;         /* vertically centered */
+    
+}
+
+.p2-paragraph-right{
+    position: relative;
+    top: -9.6vh;
+    color: black;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
+    font-size:0.938vw;
+    word-wrap: break-word;
+    width:25.365vw;
+    letter-spacing: 0.18px;
+    padding-left: 1.5vw;
+    margin-left: 29vw;
+}
+
+/* ////////// */
+/* P3 Section */
+/* ////////// */
+/* ////////// */
+/* P3 Section */
+/* ////////// */
+.p3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    background-color: #27C83F;
+    padding: 5vh 5vw;
+    text-align: center;
+    overflow: hidden; /* Prevents overflow */
+}
+
+.p3-title {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    color: #ffffff;
+    font-size: 3vw;
+    max-width: 60vw;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.p3-title .title-paragraph {
+    font-size: 1.2vw;
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
+    color: white;
+    max-width: 40vw;
+    margin: 0 auto;
+}
+
+.p3-image {
+    width: 50vw;
+    max-width: 60vw;
+    text-align: center;
+    margin: 2vh auto;
+}
+
+.p3-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures image stays within section */
+    display: block;
+}
+
+.p3-paragraph {
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 1vw;
+    max-width: 50vw;
+    margin-top: 2vh;
+    line-height: 1.5;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+    .p3 {
+        height: auto;
+        padding-bottom: 5vh;
+    }
+
+    .p3-title {
+        font-size: 4vw;
+        max-width: 80vw;
+    }
+
+    .p3-title .title-paragraph {
+        font-size: 1.5vw;
+        max-width: 50vw;
+    }
+
+    .p3-image {
+        width: 60vw;
+    }
+
+    .p3-paragraph {
+        font-size: 1.3vw;
+        max-width: 60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .p3-title {
+        font-size: 4.5vw;
+    }
+
+    .p3-title .title-paragraph {
+        font-size: 2vw;
+        max-width: 60vw;
+    }
+
+    .p3-image {
+        width: 70vw;
+    }
+
+    .p3-paragraph {
+        font-size: 1.5vw;
+        max-width: 70vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .p3-title {
+        font-size: 5vw;
+    }
+
+    .p3-title .title-paragraph {
+        font-size: 2.5vw;
+        max-width: 70vw;
+    }
+
+    .p3-image {
+        width: 80vw;
+    }
+
+    .p3-paragraph {
+        font-size: 2vw;
+        max-width: 80vw;
+    }
+}
