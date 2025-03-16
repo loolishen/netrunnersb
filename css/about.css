@@ -366,7 +366,7 @@
 }
 
 .p4-text {
-  font-family: 'HelveticaNeueLight', sans-serif;
+  font-family: 'HelveticaNeueRegular', sans-serif;
   font-weight: 400;
   font-size: 1vw;
   line-height: 23.4px;
@@ -406,12 +406,13 @@
   font-family: 'HelveticaNeueRegular', sans-serif;
   font-size: 0.938vw;
   width: 52vw;
+  line-height: normal;
 
 }
 
 .p5 .p4 .p4-line {
   width: 0.2vw; 
-  height: 7vw;
+  height: 6.5vw;
   background-color:#27C83F; /* Change to match text color */
 }
 
@@ -470,7 +471,7 @@
 
 .p6-title .title-paragraph {
   font-size: 1.042vw;
-  font-family: 'HelveticaNeueLight', sans-serif;
+  font-family: 'HelveticaNeueRegular', sans-serif;
   font-weight: 400;
   color: black;
   margin-top: 1vh;
