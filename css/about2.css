@@ -1,0 +1,215 @@
+.container {
+    max-width: 75vw !important;
+  }
+@font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url('../font/HelveticaNeueMedium.woff2') format('woff2'),
+         url('../font/HelveticaNeueMedium.otf') format('opentype');
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../font/HelveticaNeueLight.woff2') format('woff2'),
+         url('../font/HelveticaNeueLight.otf') format('opentype');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('../font/HelveticaNeueBold.woff2') format('woff2'),
+         url('../font/HelveticaNeueBold.otf') format('opentype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueRegular';
+    src: url('../font/HelveticaNeueRegular.woff2') format('woff2'),
+         url('../font/HelveticaNeueRegular.otf') format('opentype');
+    font-weight: 400;
+  }
+  
+  /* ============================ */
+  /*          Reset & Base        */
+  /* ============================ */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* ============================ */
+  /*       Custom Typography      */
+  /* ============================ */
+  .black-title {
+    color: black;
+  }
+  
+  /* ---------- p1 Section (Overlayed) ---------- */
+  .p1 {
+    position: relative;
+  }
+  
+  .p1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .p1-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* so links below remain clickable if needed */
+  }
+  
+  /* Title on Top-Left */
+  .p1-title {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: #27C83F;
+    pointer-events: auto;
+  }
+  .p1-title h1 {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  .p1-title h2 {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  .p1-title .title-paragraph {
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    max-width: 300px;
+  }
+  
+  /* Decorative ::after line on p1-title */
+  .p1-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #27C83F;
+    margin-top: 10px;
+  }
+  
+  /* Paragraph on Bottom-Right */
+  .p1-paragraph {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    color: black;
+    text-align: right;
+    max-width: 300px;
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    font-size: 1rem;
+  }
+  
+  /* ---------- p2 Section ---------- */
+  .p2-title-left,
+  .p2-title-right {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    color: #27C83F;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+  .p2-title-left::before,
+  .p2-title-right::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 30px;
+    background-color: currentColor;
+  }
+  
+  .p2-paragraph,
+  .p2-paragraph-right {
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* ---------- p3 Section ---------- */
+  .p3-title {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* ---------- p4 Section ---------- */
+  .p4-text {
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* ---------- p6 Section ---------- */
+  .p6-title h3 {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-size: 2rem;
+    color: #27C83F;
+    margin-bottom: 0.5rem;
+  }
+  .p6-title h4 {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-size: 1.75rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+  }
+  .p6-title .title-paragraph {
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    font-size: 1rem;
+    color: #000;
+    line-height: 1.5;
+  }
+  
+  /* ---------- Footer ---------- */
+  .footer a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  .footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+  }
+  .footer-logo p {
+    margin-top: 1rem;
+  }
+  
+  /* ============================ */
+  /* Minimal Custom Adjustments */
+  /* (Bootstrap’s grid and utilities handle most responsiveness) */
+  /* ============================ */
+  

@@ -1,164 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NetRunner - About Us</title>
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/about.css">
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetRunner - About Us</title>
+  <!-- Include Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/about2.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <div class="header-left">
-            <img src="../assets/NetRunner-Red.png">           
-        </div>
-        <nav class="navigation">
-          <!-- remove netrunnersb before deploy and just use the foldername -->
-            <a href="/home" class="home">HOME</a>
-            <a href="/netrunnersb/about" class="aboutus">ABOUT&nbsp;US</a> 
-            <a href="/digitalpark" class="digitalpark">DIGITAL&nbsp;PARK</a>
-            <a href="/industriesandpartners" class="industriesandpartners">
-              INDUSTRIES<br> &amp;&nbsp;PARTNERS
-            </a>
-            <a href="/contact" class="contact">CONTACT&nbsp;US</a>
-          </nav>
-          
-    </header>
+  <!-- Header -->
+  <header class="container py-3">
+    <div class="row align-items-center">
+      <div class="col-6 col-md-3">
+        <img src="../assets/NetRunner-Red.png" alt="NetRunner Logo" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-9">
+        <nav class="d-none d-md-block">
+          <ul class="nav justify-content-end">
+            <li class="nav-item"><a class="nav-link" href="/home">HOME</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/netrunnersb/about">ABOUT US</a></li>
+            <li class="nav-item"><a class="nav-link" href="/digitalpark">DIGITAL PARK</a></li>
+            <li class="nav-item"><a class="nav-link" href="/industriesandpartners">INDUSTRIES &amp; PARTNERS</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">CONTACT US</a></li>
+          </ul>
+        </nav>
+        <!-- For mobile, you could include a hamburger nav toggler -->
+      </div>
+    </div>
+  </header>
 
-    <section class="p1">
-        <div class="p1-title">
-            <p>Our Story.</p>
-            <p class="black-title">Our Vision.</p>
-            <p class="title-paragraph">We develop advanced &amp; regenerative digital parks that power the Digital Economy.</p>
+  <!-- p1 Section -->
+  <section class="p1 py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Title and paragraph -->
+        <div class="col-md-6">
+          <h1>Our Story.</h1>
+          <h2 class="black-title">Our Vision.</h2>
+          <p class="title-paragraph">
+            We develop advanced &amp; regenerative digital parks that power the Digital Economy.
+          </p>
         </div>
-        <div class="p1-image">
-            <img src="../assets/about/Subtract-P1.png" alt="Section 1">
-            <div class="p1-paragraph">
-            <p>Our new generation digital parks are built on the vision of creating a 
-                solid & sustainable operational foundation to support a dynamic eco-system of data-driven businesses</p>
-            </div>
+        <!-- Image and supporting text -->
+        <div class="col-md-6">
+          <img src="../assets/about/Subtract-P1.png" alt="Section 1" class="img-fluid">
+          <p class="p1-paragraph mt-3">
+            Our new generation digital parks are built on the vision of creating a solid &amp; sustainable operational foundation to support a dynamic eco-system of data-driven businesses.
+          </p>
         </div>
-        
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="p2-left">
-        <div class="p2-title-left">
-            <p>Solid Foundation</p>
+  <!-- p2 Section -->
+  <section class="p2-left py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Solid Foundation -->
+        <div class="col-md-6">
+          <h3 class="p2-title-left">Solid Foundation</h3>
+          <p class="p2-paragraph">
+            A high-performance business &amp; data infrastructure backbone for industries that depend on ready-access to powerful data processing &amp; storage capabilities.
+          </p>
         </div>
-        <div class="p2-paragraph">
-            <p>A high-performance business &amp; data infrastructure backbone for industries that depend on ready-access to powerful data processing & storage capabilities.</p>
+        <!-- Sustainable Foundation -->
+        <div class="col-md-6">
+          <h3 class="p2-title-right">Sustainable Foundation</h3>
+          <p class="p2-paragraph-right">
+            A greener solution to power the digital &amp; technology industry.<br><br>
+            Bringing industry value-chain players together to create a dynamic business eco-system, providing them with access to the services, amenities &amp; talent they need to thrive.
+          </p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="p2-title-right">
-            <p>Sustainable Foundation</p>
-        </div>
-        <div class="p2-paragraph-right">
-            <p>A greener solution to power the digital &amp; technology industry
-                <br><br>
-                Bringing industry value-chain players together to create a dynamic business eco-system, 
-                providing them with access to the services, amenities & talent they need to thrive.</p>
-        </div>
-    </section>
+  <!-- p3 Section -->
+  <section class="p3 py-5 bg-success text-white">
+    <div class="container text-center">
+      <h2 class="p3-title">Powering The<br>Digital Revolution</h2>
+      <p class="title-paragraph">A flexible and sustainable energy system.</p>
+      <img src="../assets/about/Subtract-P2.png" alt="Section 2" class="img-fluid mt-3">
+    </div>
+  </section>
 
-    <section class="p3">
-        <div class="p3-title">
-            <p>Powering The<br>Digital Revolution</p>
-            <p class="title-paragraph">A flexible and sustainable energy system.</p>
+  <!-- p4 Section -->
+  <section class="p4 py-5 bg-success text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-2">
+          <div class="p4-line"></div>
         </div>
-        <div class="p3-image">
-            <img src="../assets/about/Subtract-P2.png" alt="Section 2">
+        <div class="col-10">
+          <p class="p4-text">
+            Digital transformation places greater demands on energy delivery. NetRunner’s advanced technology enables the flexible management of gigawatt-scale loads, creating an adaptable energy grid. Our energy system is powered 100% by renewable energy.
+          </p>
         </div>
+      </div>
+    </div>
+  </section>
 
-        
-    </section>
+  <!-- p6 Section -->
+  <section class="p6 py-5">
+    <div class="container text-center">
+      <div class="p6-title mb-4">
+        <h3>The Future:</h3>
+        <h4 class="black-title">Growing<br>Beyond Borders</h4>
+        <p class="title-paragraph">NetRunner will produce a sustainable digital revolution across SE Asia.</p>
+      </div>
+      <img src="../assets/about/Subtract-P3.png" alt="Section 6" class="img-fluid">
+    </div>
+  </section>
 
-    <section class="p4">
-        <div class="p4-container">
-            <div class="p4-line"></div>
-            <div class="p4-text">
-                <p>Digital transformation places greater demands on energy delivery. 
-                    NetRunner’s advanced technology enables<br>
-                    the flexible management of gigawatt-scale loads, 
-                    creating an adaptable energy grid. Our energy system is powered<br>
-                    100% by renewable energy.
-                </p>
-            </div>
+  <!-- p5 Section (Additional Content) -->
+  <section class="p5 py-5">
+    <div class="container">
+      <div class="row align-items-left">
+        <div class="col-2">
+          <div class="p4-line" style="background-color:#27C83F;"></div>
         </div>
-    </section>
-
-    <section class="p6">
-        <section class="p6-content">
-            <div class="p6-title">
-                <p>The Future:</p>
-                <p class="black-title">Growing<br>Beyond Borders</p>
-                <p class="title-paragraph">NetRunner will produce a sustainable digital revolution across SE Asia.</p> <!-- fix font weight-->
-            </div>
-            <div class="p6-image">
-                <img src="../assets/about/Subtract-P3.png" alt="Section 6">
-            </div>
-        </section>
-    </section>
-    
-
-    <section class="p5">
-        <section class="p4">
-            <div class="p4-container">
-                <div class="p4-line"></div>
-                <div class="p4-text"> <!--fix line height-->
-                    <p>More than just a data centre, NetRunner is a launchpad for growth. 
-                        As South-East Asia’s demand for secure, 
-                        energy-efficient data infrastructure grows, 
-                        we are positioned to expand our digital park eco-system by establishing new hubs across the region in collaboration with global partners.
-                        <br><br>
-                        Our commitment to integrate innovation with sustainability will define NetRunner’s role as the green enabler of Asia’s digital transformation.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <!-- Logo & Description -->
-            <div class="footer-logo">
-                <img src="../assets/NetRunner-Red-white-text.png" alt="Netrunner Logo">
-                <p>Technology + Sustainability.<br>Unified To Power Growth.</p>
-            </div>
-    
-            <!-- Company Links -->
-            <div class="footer-column" style="padding-left: 5vw;">
-                <h3>Company</h3>
-                <a href="/home">Home</a>
-                <a href="/aboutus">About Us</a>
-                <a href="/digitalpark">Digital Park</a>
-                <a href="/industriesandpartners" style="line-height: 18px;">Industries & Partners</a>
-                <a href="/contact">Contact Us</a>
-            </div>
-    
-            <!-- Location Details -->
-            <div class="footer-column">
-                <h3>Location</h3>
-                <p style="line-height: 20.88px;">#12-05, Capital Tower, 168 Robinson Road, Singapore 068904</p>
-                <p style="line-height: 20.88px;">18 Jalan Mawar, Taman Bunga Raya, 50000 Kuala Lumpur</p>
-            </div>
-    
-            <!-- Contact Information -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>+60-xxx-xxx-xxxx</p>
-                <p>+65-xxx-xxx-xxxx</p>
-                <p>NetRunner@gmail.com</p>
-            </div>
+        <div class="col-10">
+          <p class="p4-text" style="color:black;">
+            More than just a data centre, NetRunner is a launchpad for growth. As South-East Asia’s demand for secure, energy-efficient data infrastructure grows, we are positioned to expand our digital park eco-system by establishing new hubs across the region in collaboration with global partners.
+            <br><br>
+            Our commitment to integrate innovation with sustainability will define NetRunner’s role as the green enabler of Asia’s digital transformation.
+          </p>
         </div>
-    
-        <!-- Copyright Section -->
-        <div class="footer-bottom">
-            <p>Copyright © 2025 NetRunner. All rights reserved.</p>
-        </div>
-    </footer>
-    
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer py-3 bg-success text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 footer-logo text-center">
+          <img src="../assets/NetRunner-Red-white-text.png" alt="Netrunner Logo" class="img-fluid">
+          <p>Technology + Sustainability.<br>Unified To Power Growth.</p>
+        </div>
+        <div class="col-md-3 footer-column">
+          <h3>Company</h3>
+          <a href="/home">Home</a>
+          <a href="/aboutus">About Us</a>
+          <a href="/digitalpark">Digital Park</a>
+          <a href="/industriesandpartners">Industries &amp; Partners</a>
+          <a href="/contact">Contact Us</a>
+        </div>
+        <div class="col-md-3 footer-column">
+          <h3>Location</h3>
+          <p>#12-05, Capital Tower, 168 Robinson Road, Singapore 068904</p>
+          <p>18 Jalan Mawar, Taman Bunga Raya, 50000 Kuala Lumpur</p>
+        </div>
+        <div class="col-md-3 footer-column">
+          <h3>Contact Us</h3>
+          <p>+60-xxx-xxx-xxxx</p>
+          <p>+65-xxx-xxx-xxxx</p>
+          <p>NetRunner@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-3">
+        <p>Copyright © 2025 NetRunner. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
