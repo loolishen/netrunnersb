@@ -28,6 +28,13 @@
          url('../font/HelveticaNeueRegular.otf') format('opentype');
     font-weight: 400;
   }
+
+  @font-face {
+    font-family: 'HelveticaNeueBlack';
+    src: url('../font/HelveticaNeueBlack.woff2') format('woff2'),
+         url('../font/HelveticaNeueBlack.otf') format('opentype');
+    font-weight: 900;
+  }
   
   /* ============================ */
   /*          Reset & Base        */
@@ -54,74 +61,92 @@
   .black-title {
     color: black;
   }
-  
-  /* ---------- p1 Section (Overlayed) ---------- */
-  .p1 {
-    position: relative;
+
+  .nav-link{
+    color: black;
+    text-decoration: none;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    font-weight: normal;
   }
-  
-  .p1 img {
-    width: 100%;
-    height: auto;
-    display: block;
+
+  .nav-link.active{
+    color:#27C83F;
+    font-weight: bold;
   }
-  
-  .p1-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* so links below remain clickable if needed */
-  }
-  
-  /* Title on Top-Left */
-  .p1-title {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    color: #27C83F;
-    pointer-events: auto;
-  }
-  .p1-title h1 {
-    font-family: 'HelveticaNeueBold', sans-serif;
-    font-size: 2.5rem;
-    margin: 0;
-  }
-  .p1-title h2 {
-    font-family: 'HelveticaNeueBold', sans-serif;
-    font-size: 2rem;
-    margin: 0.5rem 0;
-  }
-  .p1-title .title-paragraph {
-    font-family: 'HelveticaNeueRegular', sans-serif;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    max-width: 300px;
-  }
-  
-  /* Decorative ::after line on p1-title */
-  .p1-title::after {
+
+  .nav-link.active::after{
     content: "";
     display: block;
-    width: 50px;
-    height: 3px;
+    width: 4vw;
+    height: 2px;
     background-color: #27C83F;
-    margin-top: 10px;
+    position: relative;
+    
+    left: 0;
   }
   
-  /* Paragraph on Bottom-Right */
-  .p1-paragraph {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    color: black;
-    text-align: right;
-    max-width: 300px;
-    font-family: 'HelveticaNeueRegular', sans-serif;
-    font-size: 1rem;
-  }
-  
+  /* ---------- p1 Section (Overlayed) ---------- */
+  /* ---------- p1 Section ---------- */
+.p1 {
+  position: relative;
+  width: 75vw;        /* scales this section to 75% of viewport width */
+  margin: 0 auto;     /* centers the section horizontally (optional) */
+}
+
+/* The image takes full width of its parent, .p1 */
+.p1 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* optional if you want to ensure cropping behavior */
+}
+
+/* Title overlay (top-left) */
+.p1-title {
+  position: absolute;
+  top: 5%;
+
+  color: #27C83F;
+  pointer-events: auto;
+  z-index: 1; /* ensures this text is on top of the image */
+}
+
+/* Title styles */
+.p1-title h1, .p1-title h2 {
+  font-family: 'HelveticaNeueBlack', sans-serif;
+}
+
+.p1-title h1 {
+  font-size: 2.865vw;
+  margin: 0;
+}
+
+.p1-title h2 {
+  font-size: 2.865vw;
+  margin: 0.5rem 0;
+}
+
+.p1-title .title-paragraph {
+  font-family: 'HelveticaNeueRegular', sans-serif;
+  font-size: 1.042vw;
+  margin-top: 0.833vw;
+  max-width: 20vw; /* adjust to fit your design */
+  color: black;
+}
+
+/* Paragraph overlay (bottom-right) */
+.p1-paragraph {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  color: black;
+  text-align: left;
+  max-width: 17vw;
+  font-family: 'HelveticaNeueRegular', sans-serif;
+  font-size: 1.125rem;
+  z-index: 2; /* on top of the image */
+}
+
   /* ---------- p2 Section ---------- */
   .p2-title-left,
   .p2-title-right {
