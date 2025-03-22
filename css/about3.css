@@ -1,0 +1,416 @@
+.container {
+    max-width: 75vw !important;
+  }
+@font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url('../font/HelveticaNeueMedium.woff2') format('woff2'),
+         url('../font/HelveticaNeueMedium.otf') format('opentype');
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../font/HelveticaNeueLight.woff2') format('woff2'),
+         url('../font/HelveticaNeueLight.otf') format('opentype');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('../font/HelveticaNeueBold.woff2') format('woff2'),
+         url('../font/HelveticaNeueBold.otf') format('opentype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueRegular';
+    src: url('../font/helveticaneue.woff2') format('woff2'),
+         url('../font/helveticaneue.otf') format('opentype');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'HelveticaNeueBlack';
+    src: url('../font/HelveticaNeueBlack.woff2') format('woff2'),
+         url('../font/HelveticaNeueBlack.otf') format('opentype');
+    font-weight: 900;
+  }
+  
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* ============================ */
+  /*       Custom Typography      */
+  /* ============================ */
+  .black-title {
+    color: black;
+  }
+
+  .nav-link{
+    color: black;
+    text-decoration: none;
+    font-family: 'HelveticaNeueLight', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  .nav-link.active{
+    color:#27C83F;
+    font-weight: bold;
+  }
+
+  .nav-link.active::after{
+    content: "";
+    display: block;
+    width: 4vw;
+    height: 2px;
+    background-color: #27C83F;
+    position: relative;
+    
+    left: 0;
+  }
+  
+  .container {
+    max-width: 75vw !important;
+  }
+  
+  /* ---------- p1 Section ---------- */
+  .custom-container {
+    max-width: 75vw;
+  }
+  
+
+  .image-container {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 5rem;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .top-left-text{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    color: #27C83F;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .bottom-right-text {
+    font-family: 'HelveticaNeueRegular';
+    position: absolute;
+    bottom: 25px;
+    right: 50px;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 400;
+
+  }
+
+  .top-left-text h2 {
+    font-family: 'HelveticaNeueBlack';
+    font-size: 55px;
+    margin-bottom: 0.5rem;
+  }
+
+  .top-left-text p{
+    font-family: 'HelveticaNeueRegular';
+    font-weight: 400;
+    color: black;
+    margin: 0;
+    width: 354px;
+    font-size:1.25rem;
+    line-height: 0.95; letter-spacing: 0.20px; word-wrap: break-word;
+  }
+  .bottom-right-text p {
+    font-family: 'HelveticaNeueRegular';
+    font-weight: 400;
+    color: black;
+    margin: 0;
+    width: 400px;
+    font-size:1.2rem;
+    line-height: 26px; letter-spacing: 0.20px; word-wrap: break-word;
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 601px) {
+    
+  }
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+   
+  }
+
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (max-width: 992px) {
+    
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    
+  } 
+
+  
+  
+  /* ---------- p2 Section ---------- */
+  .custom-container {
+    max-width: 75vw;
+  }
+
+  .green-line-text {
+    position: relative;
+    padding-left: 1.5rem; /* space for the green line */
+  }
+
+  .p2 .green-line-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 75%;
+    background-color: #27C83F;
+    border-radius: 1px;
+  }
+
+  .p2 .green-line-text .title {
+    font-family: 'HelveticaNeueBold';
+    color: #27C83F;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .p2 .green-line-text .desc {
+    font-family: 'HelveticaNeueRegular';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    margin: 0;
+    margin-bottom: 7rem;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    
+  }
+
+   /* Small devices (portrait tablets and large phones, 600px and up) */
+   @media only screen and (min-width: 601px) {
+
+   }
+ 
+   /* Medium devices (landscape tablets, 768px and up) */
+   @media only screen and (min-width: 768px) {
+   
+   }
+ 
+   /* Large devices (laptops/desktops, 992px and up) */
+   @media only screen and (min-width: 992px) {
+     
+   }
+ 
+   /* Extra large devices (large laptops and desktops, 1200px and up) */
+   @media only screen and (min-width: 1200px) {
+     
+   } 
+  
+  /* ---------- p3 Section ---------- */
+  .p3{
+    background-color: #27C83F;
+  }
+
+  .p3 .image-container{
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  
+  .top-right-text{
+    position: absolute;
+    top: 12rem;
+    right: 8rem;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .top-right-text h2 {
+    font-family: 'HelveticaNeueBold';
+    font-size: 55px;
+    margin-bottom: 10px;
+  }
+
+  .top-right-text p{
+    font-family: 'HelveticaNeueRegular';
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    width: auto;
+    font-size:1.25rem;
+    line-height: 0.95; letter-spacing: 0.20px; word-wrap: break-word;
+  }
+  
+  /* ---------- p4 Section ---------- */
+  .p4{
+    background-color: #27C83F;
+  }
+  .p4 .green-line-text {
+    position: relative;
+    padding-left: 1.5rem; /* space for the green line */
+    align-items: center;
+  }
+
+ .p4 .green-line-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 75%;
+    background-color: white;
+    border-radius: 1px;
+  }
+
+  .p4 .green-line-text .desc {
+    font-family: 'HelveticaNeueRegular';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    margin: 0;
+    width: 100%;
+    margin-bottom: 7rem;
+  }
+
+  /* ---------- p5 Section ---------- */
+  .p5 .top-left-text{
+    top: 13rem;
+  }
+  .p5 .image-container{
+    padding-top: 10rem;
+  }
+
+  .p5 .top-left-text h2 {
+    font-family: 'HelveticaNeueBold';
+    font-size: 55px;
+    line-height: 0.95;
+  }
+
+ /* ---------- p6 Section ---------- */
+.p6 .green-line-text {
+  position: relative;
+  padding-left: 1.5rem; /* space for the green line */
+  align-items: center;
+}
+
+.green-line-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #27C83F;
+  border-radius: 1px;
+}
+
+.p6 .green-line-text .desc {
+  font-family: 'HelveticaNeueRegular';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: black;
+  margin: 0;
+  width: 100%;
+  margin-bottom: 7rem;
+}
+  
+  /* ---------- Footer ---------- */
+  .footer {
+    background-color: #27C83F;
+  }
+  
+  .footer img{
+    margin-top:-3rem;
+    margin-left: -3rem;
+    margin-bottom: 0;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.4px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .footer-logo p {
+    margin-top: -2rem;
+  }
+  
+  .footer-divider {
+    width: 60px;
+    height: 0;
+    border-top: 2px solid white;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-bottom p {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.2px;
+  }
+  
+
+  /* ============================ */
+  /* Minimal Custom Adjustments */
+  /* (Bootstrap’s grid and utilities handle most responsiveness) */
+  /* ============================ */
+  

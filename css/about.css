@@ -21,8 +21,8 @@
 
 @font-face {
   font-family: 'HelveticaNeueRegular';
-  src: url('../font/HelveticaNeueRegular.woff2') format('woff2'),
-       url('../font/HelveticaNeueRegular.otf') format('opentype');
+  src: url('../font/helveticaneue.woff2') format('woff2'),
+       url('../font/helveticaneue.otf') format('opentype');
   font-weight: 400;
 }
 
