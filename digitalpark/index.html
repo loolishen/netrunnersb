@@ -9,75 +9,6 @@
     <link rel="stylesheet" href="../css/digitalpark.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
-    <style>
-      .custom-container {
-        max-width: 75vw;
-      }
-      .highlight-bar {
-        width: 3px;
-        background-color: #27C83F;
-        margin-right: 1rem;
-      }
-      .rounded-img {
-        border-radius: 50px;
-        border: 2px solid #27C83F;
-        width: 100%;
-        height: auto;
-      }
-      .green-title {
-        color: #27C83F;
-        font-weight: 700;
-      }
-
-      .title{
-        font-size: 55px;
-      }
-
-      .carousel-item {
-      position: relative;
-      border-radius: 2rem;
-      overflow: hidden;
-      border: 2px solid #27C83F;
-      height: 460px;
-      background: white;
-    }
-
-    .text-box {
-      position: absolute;
-      color: black;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 1rem;
-      border-radius: 1rem;
-      max-width: 60%;
-    }
-
-    .bottom-left { bottom: 20px; left: 30px; }
-    .top-right { top: 20px; right: 30px; }
-
-    .text-box .title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #27C83F;
-    }
-
-    .text-box .desc {
-      font-size: 15px;
-      font-weight: 400;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      width: 5%;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: white;
-      border-radius: 9999px;
-      padding: 1rem;
-      background-size: 100% 100%;
-    }
-    </style>
 </head>
 
 <body>
@@ -98,163 +29,264 @@
           
     </header>
 
-    <div class="container custom-container py-5">
-
-      <!-- Section 1: Text Left, Image Right -->
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6">
-          <h1 class="title fw-bold" style="color: #27C83F">The Regenerative<br><span class="text-dark">Digital Park</span></h1>
-          <p class="mt-4" style="font-size: 20px; line-height: 1.6">
-            Confidence means having on-demand digital infrastructure & connectivity to scale your business without compromising our Planet’s future.
-          </p>
-        </div>
-        <div class="col-md-6">
-          <img src="https://placehold.co/510x343" class="rounded-img" alt="Image 1">
-        </div>
-      </div>
-    
-      <!-- Section 2: Image Left, Text Right -->
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6">
-          <img src="https://placehold.co/512x316" class="rounded-img" alt="Image 2">
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="highlight-bar"></div>
-          <p style="font-size: 18px; line-height: 1.6">
-            With 100% renewable energy at its core, NetRunner’s next generation technology park is a powerful foundation for AI-driven solutions, cloud-based services & digital transformation businesses.
-          </p>
-        </div>
-      </div>
-    
-      <!-- Section 3: Text Left, Image Right -->
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6 d-flex">
-          <div class="highlight-bar"></div>
-          <div>
-            <p class="green-title fs-5">Connected For Growth</p>
-            <p style="font-size: 18px; line-height: 1.6">
-              In addition to their role as strategic operational hubs, our parks aim to sustain a business eco-system, attracting tenants that build an integrated industry value-chain within the park itself.
-            </p>
+    <div class="p1">
+      <div class="container custom-container p1container">
+        <!-- Section 1 -->
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1 class="title fw-bold">The Regenerative<br><span class="text-dark">Digital Park</span></h1>
+            <p class="mt-4">Confidence means having on-demand digital infrastructure & connectivity to scale your business without compromising our Planet’s future.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="../assets/digitalpark/Rectangle 206.png" class="rounded-img" alt="Image 1">
           </div>
         </div>
-        <div class="col-md-6">
-          <img src="https://placehold.co/510x316" class="rounded-img" alt="Image 3">
-        </div>
-      </div>
     
-      <!-- Section 4: Image Left, Text Right -->
-      <div class="row align-items-center mb-5">
-        <div class="col-md-6">
-          <img src="https://placehold.co/512x316" class="rounded-img" alt="Image 4">
-        </div>
-        <div class="col-md-6 d-flex">
-          <div class="highlight-bar"></div>
-          <div>
-            <p class="green-title fs-5">Talent For Growth</p>
-            <p style="font-size: 18px; line-height: 1.6">
-              We believe talent is the lifeblood of a thriving Digital Economy. Our parks are supported by initiatives that provide businesses with a ready talent base, promote collaboration to drive innovation & create a highly-liveable environment for community.
-            </p>
+        <!-- Section 2 -->
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="../assets/digitalpark/Rectangle 207.png" class="rounded-img" alt="Image 2">
+          </div>
+          <div class="col-md-6 d-flex">
+            <div class="highlight-bar"></div>
+            <p>With 100% renewable energy at its core, NetRunner’s next generation technology park is a powerful foundation for AI-driven solutions, cloud-based services & digital transformation businesses.</p>
           </div>
         </div>
-      </div>
     
-    </div>
-
-    
-    <div class="container custom-container py-5">
-      <h1 class="text-white fw-bold mb-4">Park Components</h1>
-    
-      <div id="parkCarousel" class="carousel slide" data-bs-interval="false" data-bs-wrap="false">
-        <div class="carousel-inner">
-    
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <img src="https://placehold.co/1008x460" class="d-block w-100 h-100 object-fit-cover" alt="Slide 1">
-            <div class="text-box bottom-left">
-              <div class="title">Industrial Precinct</div>
-              <div class="desc">
-                A high-performance operational hub hosting green data centres & digital businesses, supported by their partners.
-              </div>
+        <!-- Section 3 -->
+        <div class="row align-items-center">
+          <div class="col-md-6 d-flex">
+            <div class="highlight-bar"></div>
+            <div>
+              <p class="green-title">Connected For Growth</p>
+              <p>In addition to their role as strategic operational hubs, our parks aim to sustain a business eco-system, attracting tenants that build an integrated industry value-chain within the park itself.</p>
             </div>
           </div>
-    
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <img src="https://placehold.co/1008x460" class="d-block w-100 h-100 object-fit-cover" alt="Slide 2">
-            <div class="text-box top-right">
-              <div class="title">Commercial Precinct</div>
-              <div class="desc">
-                Office spaces, innovation hubs & co-working environments for enterprises & start-ups. Amenities for a thriving community.
-              </div>
-            </div>
+          <div class="col-md-6">
+            <img src="../assets/digitalpark/Rectangle 208.png" class="rounded-img" alt="Image 3">
           </div>
-    
-          <!-- Slide 3 -->
-          <div class="carousel-item">
-            <img src="https://placehold.co/1008x460" class="d-block w-100 h-100 object-fit-cover" alt="Slide 3">
-            <div class="text-box bottom-left">
-              <div class="title">Physical Infrastructure</div>
-              <div class="desc">
-                An integrated smart, liveable city served by seamless connectivity, transportation & sustainably-managed utilities.
-              </div>
-            </div>
-          </div>
-    
-          <!-- Slide 4 -->
-          <div class="carousel-item">
-            <img src="https://placehold.co/1008x460" class="d-block w-100 h-100 object-fit-cover" alt="Slide 4">
-            <div class="text-box top-right">
-              <div class="title">Utilities Infrastructure</div>
-              <div class="desc">
-                A high-speed, scalable data & communications backbone that ensures optimal uptime, efficiency & security.
-              </div>
-            </div>
-          </div>
-    
-          <!-- Slide 5 -->
-          <div class="carousel-item">
-            <img src="https://placehold.co/1008x460" class="d-block w-100 h-100 object-fit-cover" alt="Slide 5">
-            <div class="text-box bottom-left">
-              <div class="title">Renewable Energy</div>
-              <div class="desc">
-                A resilient smart green-energy grid for efficiency with reduced carbon footprint, powered by hydro, solar & biomass.
-              </div>
-            </div>
-          </div>
-    
         </div>
     
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#parkCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#parkCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </button>
+        <!-- Section 4 -->
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <img src="../assets/digitalpark/Rectangle 209.png" class="rounded-img" alt="Image 4">
+          </div>
+          <div class="col-md-6 d-flex">
+            <div class="highlight-bar"></div>
+            <div>
+              <p class="green-title">Talent For Growth</p>
+              <p>We believe talent is the lifeblood of a thriving Digital Economy. Our parks are supported by initiatives that provide businesses with a ready talent base, promote collaboration to drive innovation & create a highly-liveable environment for community.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      const carousel = document.querySelector('#parkCarousel');
-      const prevBtn = carousel.querySelector('.carousel-control-prev');
-      const nextBtn = carousel.querySelector('.carousel-control-next');
     
-      function updateNavVisibility() {
-        const items = carousel.querySelectorAll('.carousel-item');
-        const activeIndex = [...items].findIndex(item => item.classList.contains('active'));
-    
-        // Hide left button on first slide
-        prevBtn.style.display = activeIndex === 0 ? 'none' : 'flex';
-        // Hide right button on last slide
-        nextBtn.style.display = activeIndex === items.length - 1 ? 'none' : 'flex';
-      }
-    
-      // Update on slide event
-      carousel.addEventListener('slid.bs.carousel', updateNavVisibility);
-    
-      // Initialize on load
-      window.addEventListener('DOMContentLoaded', updateNavVisibility);
-    </script>
-    
+    <div class="p2">
+      <div class="container custom-container py-5">
+        <h1 class="text-white">Park Components</h1>
+      
+        <div id="parkCarousel" class="carousel slide" data-bs-interval="false" data-bs-wrap="false">
+          <div class="carousel-inner">
+      
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <img src="../assets/digitalpark/Park Component-1.png" class="carousel-img" alt="Slide 1">
+              <div class="text-box bottom-left">
+                <div class="title">Industrial Precinct</div>
+                <div class="desc">
+                  A high-performance operational hub hosting green data centres & digital businesses, supported by their partners.
+                </div>
+              </div>
+            </div>
+      
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <img src="../assets/digitalpark/Park Component-2.png" class="carousel-img" alt="Slide 2">
+              <div class="text-box top-right">
+                <div class="title">Commercial Precinct</div>
+                <div class="desc">
+                  Office spaces, innovation hubs & co-working environments for enterprises & start-ups. Amenities for a thriving community.
+                </div>
+              </div>
+            </div>
+      
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <img src="../assets/digitalpark/Park Component-3.png" class="carousel-img" alt="Slide 3">
+              <div class="text-box bottom-left">
+                <div class="title">Physical Infrastructure</div>
+                <div class="desc">
+                  An integrated smart, liveable city served by seamless connectivity, transportation & sustainably-managed utilities.
+                </div>
+              </div>
+            </div>
+      
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <img src="../assets/digitalpark/Park Component-4.png" class="carousel-img" alt="Slide 4">
+              <div class="text-box top-right">
+                <div class="title">Utilities Infrastructure</div>
+                <div class="desc">
+                  A high-speed, scalable data & communications backbone that ensures optimal uptime, efficiency & security.
+                </div>
+              </div>
+            </div>
+      
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+              <img src="../assets/digitalpark/Park Component-5.png" class="carousel-img" alt="Slide 5">
+              <div class="text-box bottom-left">
+                <div class="title">Renewable Energy</div>
+                <div class="desc">
+                  A resilient smart green-energy grid for efficiency with reduced carbon footprint, powered by hydro, solar & biomass.
+                </div>
+              </div>
+            </div>
+      
+          </div>
+      
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#parkCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#parkCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        const carousel = document.querySelector('#parkCarousel');
+        const prevBtn = carousel.querySelector('.carousel-control-prev');
+        const nextBtn = carousel.querySelector('.carousel-control-next');
+      
+        function updateNavVisibility() {
+          const items = carousel.querySelectorAll('.carousel-item');
+          const activeIndex = [...items].findIndex(item => item.classList.contains('active'));
+      
+          // Hide left button on first slide
+          prevBtn.style.display = activeIndex === 0 ? 'none' : 'flex';
+          // Hide right button on last slide
+          nextBtn.style.display = activeIndex === items.length - 1 ? 'none' : 'flex';
+        }
+      
+        // Update on slide event
+        carousel.addEventListener('slid.bs.carousel', updateNavVisibility);
+      
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', updateNavVisibility);
+      </script>
+    </div>
+  
+  <section class="p5 py-5" style="padding-top: 10rem; padding-bottom: 10rem;">
+    <div class="container custom-p5-container">
+
+      <h1>Park Components</h1>
+
+      <div class="row g-4 justify-content-between">
+        
+  
+        <!-- Card 1 -->
+        <div class="col-12 col-md-4">
+          <div class="p5-card">
+            <img src="../assets/digitalpark//Rectangle 198.png" alt="Card 1" class="p5-card-img">
+            <div class="p5-card-content">
+              <div class="p5-title">Power Data<br>Capabilities</div>
+              <p class="p5-desc">Tier-4 green data centres for business that require high-capacity data storage & processing capabilities.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="col-12 col-md-4">
+          <div class="p5-card">
+            <img src="../assets/digitalpark/Rectangle 199.png"" alt="Card 2" class="p5-card-img">
+            <div class="p5-card-content">
+              <div class="p5-title">Park<br>Management</div>
+              <p class="p5-desc">Intelligent facilities & utilities management for optimised operations. <br/>Business support services that facilitate smooth integration of operations & its expansion within the park.</p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="col-12 col-md-4">
+          <div class="p5-card">
+            <img src="../assets/digitalpark/Rectangle 200.png"" alt="Card 3" class="p5-card-img">
+            <div class="p5-card-content">
+              <div class="p5-title">Talent &amp;<br>Innovation</div>
+              <p class="p5-desc">Access a ready pool of talent through partnerships with universities & tech incubators. Accelerate product & technology innovation through industry collaborations.</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Tagline -->
+        <div class="col-md-3 text-center text-md-left footer-logo mb-4 mb-md-0">
+          <img src="../assets/NetRunner-Red-white-text.png" alt="Netrunner Logo" class="img-fluid mb-3">
+          <p>Technology + Sustainability.<br>Unified To Power Growth.</p>
+        </div>
+  
+        <!-- Company Links -->
+        <div class="col-md-3 footer-column mb-4 mb-md-0">
+          <h3>Company</h3>
+          <div class="footer-divider"></div>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="/home">Home</a></li>
+            <li class="mb-2"><a href="/aboutus">About Us</a></li>
+            <li class="mb-2"><a href="/digitalpark">Digital Park</a></li>
+            <li class="mb-2"><a href="/industriesandpartners">Industries & Partners</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Location -->
+      <div class="col-md-3 footer-column mb-4 mb-md-0">
+          <h3>Location</h3>
+          <div class="footer-divider"></div>
+          <p class="mb-3">
+            #12-05, Capital Tower,<br>
+            168 Robinson Road,<br>
+            Singapore 068904
+          </p>
+          <p>
+            18 Jalan Mawar,<br>
+            Taman Bunga Raya,<br>
+            50000 Kuala Lumpur
+          </p>
+        </div>
+  
+        <!-- Contact -->
+        <div class="col-md-3 footer-column">
+          <h3>Contact Us</h3>
+          <div class="footer-divider"></div>
+          <p class="mb-2">+60-xxx-xxx-xxxx</p>
+          <p class="mb-2">+65-xxx-xxx-xxxx</p>
+          <p>NetRunner@gmail.com</p>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="footer-bottom text-center mt-5">
+        <p class="mb-0">Copyright © 2025 NetRunner. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+
+  
+
+  <!-- Optional Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

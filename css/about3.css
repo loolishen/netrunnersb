@@ -87,12 +87,96 @@
   .container {
     max-width: 75vw !important;
   }
+
+  /* --------- Header------------- */
+  header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 83vw;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    overflow-x: hidden;
+  }
+  
+  /* 
+    Assuming a 1920px width, -1.1rem (~17.6px) is roughly 0.9vw.
+    Adjust the value if needed.
+  */
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 50%;
+    right:28%;
+  }
+  
+  .navigation {
+    position: relative;
+    top: -1vw;  /* -1vw approximates the -1.1rem offset */
+    display: flex;
+    flex-wrap: nowrap;
+    /* 3rem ≈ 48px => about 2.5vw on a 1920px width */
+    gap: 2.5vw;
+    left: 8%
+  }
+  
+  .navigation a {
+    font-family: 'HelveticaNeueLight', sans-serif; /* Updated font family */
+    color: black;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-weight: normal; /* Use normal weight for the light font */
+  }
+
+  /* Style for the active "HOME" link */
+  .navigation .digitalpark {
+    color: #27C83F; /* Green color */
+    font-weight: bold;
+  }
+
+  /* Underline Effect */
+  .navigation .digitalpark::after {
+    content: "";
+    display: block;
+    width: 3vw;
+    height: 2px;
+    background-color: #27C83F;
+    position: absolute;
+    top: 2.5vh;
+    left: 0;
+  }
+    
+  .navigation .industriesandpartners {
+    position: relative;
+    /* -1.3rem (~20.8px) ≈ 1vw */
+    top: -1vw;
+  }
+  
+  @media (max-width: 600px) {
+    .navigation {
+      /* 1rem ≈ 16px → roughly 0.8vw on a 1920px design; adjust if needed */
+      gap: clamp(0.8rem, 1vw, 1rem);
+    }
+    
+    .navigation a {
+      font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+    }
+  }
   
   /* ---------- p1 Section ---------- */
   .custom-container {
     max-width: 75vw;
+
   }
   
+  .p1container{
+    padding-top: 10rem;
+  }
 
   .image-container {
     position: relative;

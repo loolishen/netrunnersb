@@ -362,12 +362,13 @@
 /* P3 Section */
 /* ////////// */
 /* ---------- P3 Section ---------- */
+/* ---------- P3 Section ---------- */
 .p3 {
   background-color: #27C83F;
 }
 
 .p3-title {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'HelveticaNeueBold', sans-serif;
   font-weight: 700;
   font-size: 55px;
   line-height: 1.1;
@@ -376,17 +377,22 @@
 }
 
 .main-card {
-  background: linear-gradient(156deg, rgba(0, 0, 0, 0.8) 11%, rgba(0, 0, 0, 0) 100%), white;
   border-radius: 42px;
   border: 1.68px solid #27C83F;
   color: white;
+  height: 108%;
 }
 
+/* Feature card styling with fixed size */
 .feature-card {
   background: white;
   border: 1.68px solid #27C83F;
   border-radius: 42px;
-  min-height: 220px;
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .icon-placeholder {
@@ -398,126 +404,113 @@
 }
 
 .feature-title {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'HelveticaNeueBold', sans-serif;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.2px;
   margin-bottom: 0.5rem;
+  color: #27C83F;
 }
 
 .feature-text {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'HelveticaNeueRegular', sans-serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
   color: black;
   letter-spacing: 0.15px;
+  margin-bottom: 0;
 }
 
+.p3 .top-left-text{
+  font-family: 'HelveticaNeueRegular', sans-serif;
+  position: absolute;
+  top: 3.5rem;
+  left: 30px;
+  color: #27C83F;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.p3 .top-left-text h4{
+  font-size: clamp(1.2rem, 1.25rem, 2rem);
+}
+
+.p3 .top-left-text p {
+  font-size: clamp(0.9rem, 1rem, 1.2rem);
+}
+.gap-3 {
+  gap: 1rem;
+}
 
 
 /* ////////// */
 /* P4 Section */
 /* ////////// */
-.p4{
-  position: relative;
-    height: auto;
+.top-right-text{
+  position: absolute;
+  top: 15rem;
+  right: 8rem;
+  color: #27C83F;
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
-.p4-image {
-    width: 75vw;
-    margin: auto auto auto auto;
-    position: relative; /* Establishes the positioning context */
-    overflow: hidden;
-    text-align: center;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-    
+.top-right-text h2 {
+  font-family: 'HelveticaNeueBold';
+  font-size: 55px;
+  margin-bottom: 10px;
 }
 
-.p4-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the container */
-  display: block;
+.p4 .bottom-left-text {
+  font-family: 'HelveticaNeueRegular';
+  position: absolute;
+  bottom: 15rem;
+  left: 40px;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 30%;
+  text-align: left;
+  
 }
 
-.p4-title {
-    z-index: 4;
-    font-family: 'HelveticaNeueBold', sans-serif;
-    color: #27C83F;
-    font-size: 2.865vw;
-    margin:1.5vh auto;
-    width: 60vw;
-    position: absolute;
-    text-align: left;
-    right: -7%;
-    top: 15%;
+.p4 .bottom-left-text p {
+  font-size: 19px;
+  margin: 0;
 }
 
-.p4-title .black-title{
-    color: black;
-}
-
-.p4-paragraph {
-    position: absolute;
-    bottom: 25vh;  /* Adjust as needed for spacing */
-    left: 3.5vw;   /* Adjust as needed for spacing */
-    z-index: 5;
-    text-align: left;
-    font-family: 'HelveticaNeue', sans-serif;
-    font-weight: 400;
-    color: white;
-    font-size: 0.938vw;
-    line-height: 1.3;
-    width: 22.136vw;  /* Optional, adjust as needed */
-}
-
-.p4-paragraph a{
-    text-decoration: underline;
-    color: #ffffff;
+.p4 .bottom-left-text a{
+  font-size: 19px;
+  margin: 0;
+  text-decoration: underline;
+  color: white;
 }
 
 /* //////////// */
 /* P5 container */
 /* //////////// */
-.p5 {
-  position: relative;
-  width: 100vw;
-  margin: 0 auto;
-  padding: 2rem 0;
+
+.p5{
   background-color: #27C83F;
+
 }
 
-/* p5-main is centered and becomes a flex container with fixed width */
-.p5-main {
-  width: 60vw;          /* Maximum width for the section */
-  margin: 0 auto 0 auto;  /* Centered and spaced from the top */
-  display: flex;
-  gap:2vw;
-  justify-content: center;
-  padding-bottom: 20vh;
+.custom-p5-container {
+  max-width: 75vw;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
-/* Each box styling */
-.p5 .logotext-container {
+.p5-card {
   position: relative;
-  width: 19.33vw; /* Ensures a fixed width */
-  height: 20.118vw;
-  border-radius: 2.132vw;
+  aspect-ratio: 3 / 4;
+  border-radius: 40.92px;
   overflow: hidden;
-  padding: 1rem;
-  text-align: left;
-  background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: flex;
-  flex-direction: column; /* Stack elements */
-  justify-content: center; /* Center vertically */
-  align-items: flex-start; /* Align text to the left */
+  transition: background 0.3s ease;
 }
 
-/* Style the image so it fills the container and sits behind the text */
-.p5 .logotext-container img.backgroundimage {
+.p5-card-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -525,73 +518,74 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  border-radius: 40.92px;
   transition: opacity 0.3s ease;
 }
 
-/* Ensures subtitle stays inside */
-.p5 .p5-subtitle {
+.p5-card-content {
   position: relative;
   z-index: 2;
-  font-family: 'HelveticaNeueBold', sans-serif;
-  font-size: 1.5vw;
   color: white;
-  width: 100%;
-  margin-bottom: 0.5rem; /* Creates space between subtitle and link */
-  word-wrap: break-word;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
+.p5-title {
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6vw;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02vw;
+  transition: color 0.3s ease;
+  top: -23rem;
+  left: 2rem;
+}
 
-.p5 .p5-subtitle::before {
+.p5-title::before {
   content: "";
   position: absolute;
-  left: -0.5vw;
+  left: -1.5rem;
   top: 0;
-  bottom: 0;
-  width: 0.256rem;           /* adjust thickness as needed */
-  height: 4.263vw;
-  background-color: currentColor; /* so it follows text color */
-  margin: auto;         /* vertically centered */
+  width: 4px;
+  height: 81.84px;
+  background: white;
+  transition: background 0.3s ease;
 }
 
-
-/* Ensure text and links are above the image */
-.p5 .logotext-container p{
-  font-family: 'Roboto', sans-serif;
-  position: relative;
-  z-index: 2;
-  color: white;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  font-size: 1.5vw;
-  font-weight: 700;
-  top: -8.7vh;
-  left: 2.3vh;
-  text-align: left;
-  height: 3.324vw;
-}
-.p5 .logotext-container a {
-  position: relative;
-  z-index: 2;
-  font-family: 'HelveticaNeueLight', sans-serif;
-  font-size: 0.938vw;
-  color: white;
+.p5-link {
+  font-family: 'HelveticaNeueRegular', sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
   text-decoration: underline;
-  text-align: left;
-  margin-top: auto; /* Pushes it to the bottom of the container */
+  line-height: 1.5;
+  color: white;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+  top: -2rem;
+  position: relative;
+  left: 1rem;
 }
 
-/* Hover effect: image fades out, background becomes white, text turns black */
-.p5 .logotext-container:hover {
-  background-color: white;
+.p5-card:hover {
+  background: white;
 }
-.p5 .logotext-container:hover img.backgroundimage {
+
+.p5-card:hover .p5-card-img {
   opacity: 0;
 }
-.p5 .logotext-container:hover p,
-.p5 .logotext-container:hover a {
-  color: black;
+
+.p5-card:hover .p5-title::before {
+  background: black;
 }
 
+.p5-card:hover .p5-title,
+.p5-card:hover .p5-link {
+  color: black;
+}
 /* ////////////// */
 /* Footer Section */
 /* ////////////// */
@@ -685,408 +679,3 @@
   color: #27C83F;
 }
 
-/* ============================== */
-/* General Responsive Media Queries */
-/* ============================== */
-
-/* Extra Large Screens (above 1920px) */
-@media (min-width: 1921px) {
-  html {
-    font-size: 18px; /* Slightly larger base font */
-  }
-}
-
-/* Large Screens (Desktop & Laptops) */
-@media (max-width: 1440px) {
-  .navigation a {
-    font-size: clamp(0.8rem, 1vw, 1rem);
-  }
-
-  .hero-title p {
-    font-size: 3.5rem;
-  }
-
-  .p3-title {
-    font-size: clamp(2rem, 2.8vw, 3.5rem);
-  }
-
-  .footer-column {
-    width: 25%;
-  }
-}
-
-/* Tablets (Between 768px - 1024px) */
-@media (max-width: 1024px) {
-  .navigation {
-    gap: 1.5vw;
-  }
-
-  .hero-title p {
-    font-size: 3rem;
-  }
-
-  .p2-title, .p4-title {
-    font-size: 2.5vw;
-    width: 80%;
-  }
-
-  .p3-main {
-    align-items: center;
-  }
-
-  .p3-right-image {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .p5-main {
-    width: 80vw;
-    gap: 2rem;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .footer-column {
-    width: 100%;
-  }
-}
-
-/* Mobile Devices (Below 768px) */
-@media (max-width: 768px) {
-  html {
-    font-size: 14px;
-    overflow-x: hidden;
-  }
-
-  header {
-    top: 1%;
-    left: 40%;
-    width: 100%;
-  }
-
-  .header-left img{
-    left: 7%;
-  }
-
-  .navigation {
-    display: none; /* Hide navigation for mobile */
-  }
-
-  .hero-section {
-    padding: 1rem;
-    text-align: center;
-    width: 100vw;
-    height:100vh;
-  }
-
-  .hero-title p {
-    font-size: 2.5rem;
-  }
-
-  .hero-text {
-    max-width: 90vw;
-    left: 7%;
-}
-
-  .p2, .p4 {
-    height: auto;
-  }
-
-  .p2-image{
-    padding-top: 7.5vh;
-    padding-bottom: 7.5vh;
-  }
-
-  .p2-title, .p4-title {
-    font-size: 3.438vw;
-    width: 100%;
-    text-align: left;
-  }
-
-  .p2-title{
-    top: 81%;
-    left: 14%;
-  }
-
-  .p2-paragraph{
-    top: 68%;
-    font-size: 0.938vw;
-    text-align: left;
-  }
-
-  .p3 {
-    justify-content: flex-start;
-    width: 100vw;
-    background-color: #27C83F;
-  }
-
-  .p3-title {
-    text-align: left;
-    font-size: 2rem;
-    width: 75vw;
-    margin-bottom: 2rem;
-  }
-
-  .p3-main {
-    width:75vw;
-  }
-  
-  .p3-left-image img{
-    position: relative;
-    width: 40%;
-    height: 40%;
-    text-align: left;
-
-    top: 2%;
-  }
-
-  .p3-right-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem; /* Space between cards */
-  }
-
-  .p3-right-image .logotext-container {
-    width: 100%; /* Adjust width to fit screen */
-    max-width: 80vw; /* Ensures it doesn't get too wide */
-  }
-
-  .p3-right-image .logotext-container img {
-    width: 8vw;
-    max-width: 50px;
-    height: auto;
-    left: -42%;
-    top: 0% !important;
-}
-
-  .p3-right-image .image1{
-    width: 80%;
-  }
-
-  .p4-image img {
-    width: 100%;
-    height: 100%;
-    padding-top: 7.5vh;
-    padding-bottom: 7.5vh;
-    margin: 0;
-  }
-
-  .p4-title{
-    left: 46%;
-    top: 18%;
-  }
-
-  .p4-paragraph{
-    bottom: 25%;
-
-  }
-
-  /* Stack everything in one column */
-  .p3-main {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-      width: 90%;
-  }
-
-  /* Ensure the left image is fully visible */
-  .p3-left-image img {
-      width: 90%;
-      max-width: 350px; /* Keeps it visually balanced */
-      height: auto;
-      border-radius: 2vw;
-      padding-top: 1rem;
-  }
-
-  /* Stack items into a single column */
-  .p3-right-image {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      width: 100%;
-  }
-
-  /* Ensure equal width (48vw) and half height of left image */
-  .p3-right-image .logotext-container {
-      width: 72vw; /* Fixed width */
-      height: auto !important;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: white;
-      border-radius: 2vw;
-      margin-top: 0 !important;
-  }
-
-  /* Ensure the logo is scaled properly and above the title */
-  .p3-right-image .logotext-container img {
-      width: 8vw; /* Scale dynamically */
-      max-width: 50px;
-      height: auto;
-      padding-top: 1rem;
-      left: -42%;
-      margin-top: 0 !important;
-  }
-
-  /* Increase text size for better readability */
-  .p3-subtitle {
-      font-size: 1.25rem; /* Scaled-up text */
-      color: #27C83F;
-      margin-bottom: 0.5rem;
-      margin-top:0 !important;
-  }
-
-  .p3-subparagraph {
-      font-size: 0.938rem;
-      width: 48vw !important;
-      color: black;
-      text-align: left;
-      padding-bottom: 1rem;
-  }
-
-
-
-  /* Make P5 containers in one column */
-  .p5-main {
-    display: flex;
-    flex-direction: column; /* Stack items */
-    align-items: center; /* Center align for consistency */
-    width: 100%; /* Ensure it spans full container width */
-}
-
-.p5 .logotext-container {
-  width: 20vw; /* Fixed width for all images */
-  height: 25vw; /* Same height for uniformity */
-  max-width: 350px; /* Prevents excessive scaling */
-  max-height: 400px;
-  border-radius: 2vw;
-  overflow: hidden;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  background-color: white;
-}
-
-/* Ensure background images inside logotext-container scale properly */
-.p5 .logotext-container img.backgroundimage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* Standardize text and links inside logotext-container */
-.p5 .p5-subtitle,
-.p5 .logotext-container a {
-  font-size: 1rem; /* Same font size for all */
-  text-align: center;
-  width: 90%;
-}
-
-  /* Make the footer container a single column */
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    padding: 2rem 0;
-  }
-
-  /* Adjust the logo section */
-  .footer-logo {
-    width: 60%;
-    margin-bottom: 1rem;
-  }
-
-  .footer-logo img {
-    width: 60%;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .footer-logo p {
-    font-size: 0.9rem;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  /* Make footer columns stack and shrink */
-  .footer-column {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .footer-column h3 {
-    font-size: 1rem;
-  }
-
-  .footer-column a,
-  .footer-column p {
-    font-size: 0.9rem;
-  }
-
-  /* Adjust the underline effect for headings */
-  .footer-column h3::after {
-    width: 3rem;
-    height: 2px;
-    margin: 0.5rem auto;
-  }
-
-  /* Footer bottom text */
-  .footer-bottom p {
-    font-size: 0.85rem;
-  }
-
-
-/* Small Mobile Devices (Below 480px) */
-@media (max-width: 480px) {
-  .hero-title p {
-    font-size: 2rem;
-  }
-
-  .hero-paragraph p {
-    font-size: 1rem;
-    width: 90%;
-  }
-
-  .p3-title {
-    font-size: 1.8rem;
-  }
-
-  .p5-main {
-    width: 100%;
-  }
-
-  .footer-logo img {
-    width: 80%;
-  }
-
-  .footer-column h3 {
-    font-size: 0.9rem;
-  }
-
-  .footer-column a,
-  .footer-column p {
-    font-size: 0.8rem;
-  }
-
-  .footer-bottom p {
-    font-size: 0.75rem;
-  }
-}
-}
