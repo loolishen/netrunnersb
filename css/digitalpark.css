@@ -236,10 +236,8 @@
 .carousel-img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 1rem;
   object-fit: cover;
-  background-color: white;
-  border-radius: 70px;
 }
 
 .text-box {
