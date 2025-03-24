@@ -99,7 +99,7 @@
       font-family: 'HelveticaNeueLight', sans-serif; /* Updated font family */
       color: black;
       text-decoration: none;
-      font-size: clamp(0.9rem, 1vw, 1.1rem);
+      font-size: clamp(0.9rem, 1.333rem, 1.1rem);
       font-weight: normal; /* Use normal weight for the light font */
       position: relative;
   
@@ -176,7 +176,7 @@
 
   .top-left-text h2 {
     font-family: 'HelveticaNeueBlack';
-    font-size: 55px;
+    font-size: 4.3rem;
     margin-bottom: 10px;
   }
 
@@ -185,8 +185,8 @@
     font-weight: 400;
     color: black;
     margin: 0;
-    width: 450px;
-    font-size:1.25rem;
+    width: 550px;
+    font-size:1.5rem;
     line-height: 0.95; letter-spacing: 0.20px; word-wrap: break-word;
   }
   
@@ -210,7 +210,7 @@
   .p2 .green-line-text .title {
     font-family: 'HelveticaNeueBold';
     color: #27C83F;
-    font-size: 22px;
+    font-size: 1.833rem;
     font-weight: 700;
     line-height: 1.4;
     margin-bottom: 0.5rem;
@@ -218,9 +218,9 @@
 
   .p2 .green-line-text .desc {
     font-family: 'HelveticaNeueRegular';
-    font-size: 18px;
+    font-size:1.5rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.2;
     color: black;
     margin: 0;
     margin-bottom: 7rem;
@@ -233,7 +233,7 @@
   }
   
   .p3 h1 {
-    font-size: 3.5rem;
+    font-size: 4.583rem;
     font-family: 'HelveticaNeueBold', sans-serif;
     margin-bottom: 5rem;
   }
@@ -242,18 +242,18 @@
     font-size: 1.25rem;
     line-height: 1;
   }
-  
   .text-box.bottom-left {
     bottom: 4rem;
     left: 3rem;
-    width: 400px;
+    width: 750px;
   }
   
   .text-box.top-right {
-    top: 3rem;
-    right: 10rem;
-    width: 400px;
+    top:0rem;
+    right: -17rem;
+    width:750px;
   }
+  
   
   
   .carousel-inner {
@@ -287,31 +287,18 @@
     
   }
   
-  .text-box.bottom-left {
-    top: calc(50% + 35px);
-    left: calc(50% - 425px);
-    width: 400px;
-  }
-
-  
-  .text-box.top-right {
-    top: calc(50% - 200px); /* Adjust this */
-    left: calc(50% + 50px); /* Adjust this */
-    width: 400px;
-  }
-  
   
   .text-box .title {
-    font-size: 1.5rem;
+    font-size: 1.667rem;
     font-weight: 700;
     color: #27C83F;
   }
   
   .text-box .desc {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color:black;
-    width: 350px;
+    width: 450px;
   }
   
   .carousel-control-prev,
@@ -403,7 +390,7 @@
   }
   
   .section-title {
-    font-size: 55px;
+    font-size: 4.583rem;
     color: #27C83F;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 700;
@@ -435,7 +422,7 @@
   }
   
   .benefit-desc {
-    font-size: 15px;
+    font-size: 1.25rem;
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
     color: black;

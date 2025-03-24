@@ -99,7 +99,7 @@
     font-family: 'HelveticaNeueLight', sans-serif; /* Updated font family */
     color: black;
     text-decoration: none;
-    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.333rem, 1.1rem);
     font-weight: normal; /* Use normal weight for the light font */
     position: relative;
 
@@ -148,12 +148,12 @@
 }
 
 .title{
-  font-size: 55px;
+  font-size: 4.583rem;
   color: #27C83F;
 }
 
 .p1container p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1;
   font-family: 'HelveticaNeueRegular';
   word-wrap: break-word;
@@ -161,14 +161,14 @@
 }
 
 .p1container .title {
-  font-size: 3.5rem;
+  font-size: 4.583rem;
   line-height: 1.2;
   font-family: 'HelveticaNeueBlack';
 }
 
 .highlight-bar {
   width: 4px;
-  height: 80px;
+  height: 6rem;
   background-color: #27C83F;
   margin-right: 1rem;
   margin-left: 3rem;
@@ -197,26 +197,26 @@
 }
 
 .p2 h1 {
-  font-size: 3.5rem;
+  font-size: 4.583rem;
   font-family: 'HelveticaNeueBold', sans-serif;
   margin-bottom: 7rem;
 }
 
 .text-box .desc {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1;
 }
 
 .text-box.bottom-left {
   bottom: 4rem;
   left: 3rem;
-  width: 400px;
+  width: 550px;
 }
 
 .text-box.top-right {
   top: 3rem;
-  right: 10rem;
-  width: 400px;
+  right: 0rem;
+  width:550px;
 }
 
 
@@ -238,6 +238,8 @@
   height: auto;
   border-radius: 1rem;
   object-fit: cover;
+  background-color: white;
+  border-radius: 4rem;
 }
 
 .text-box {
@@ -245,7 +247,7 @@
   color: black;
   padding: 1rem;
   border-radius: 1rem;
-  max-width: 60%;
+  max-width: 80%;
   
 }
 
@@ -253,13 +255,13 @@
 .top-right { top: 20px; right: 30px; }
 
 .text-box .title {
-  font-size: 1.5rem;
+  font-size: 1.667rem;
   font-weight: 700;
   color: #27C83F;
 }
 
 .text-box .desc {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
@@ -287,7 +289,26 @@
   border-radius: 9999px;
   padding: 1rem;
   background-size: 100% 100%;
+  position: relative;
 }
+
+.carousel-control-next-icon {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 1rem;
+  background-size: 100% 100%;
+  right: -2rem;
+  
+}
+
+.carousel-control-prev-icon {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 1rem;
+  background-size: 100% 100%;
+  left: -1rem;
+}
+
 
 /* //////////// */
 /* P5 container */
@@ -298,7 +319,7 @@
 }
 
 .p5 h1 {
-  font-size: 3.5rem;
+  font-size: 4.583rem;
   font-family: 'HelveticaNeueBold', sans-serif;
   margin-bottom: 4rem;
   color: #27C83F;
@@ -345,7 +366,7 @@
 .p5-title {
   position: relative;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.6vw;
+  font-size: 2.573rem;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: 0.02vw;
@@ -364,21 +385,20 @@
   top: 2rem;
   transform: translateX(-1.5rem);
   width: 4px;
-  height: 81.84px;
+  height: 100px;
   background: white;
   transition: background 0.3s ease;
-  border-radius: 2px;
 }
 
 .p5-desc {
   position: absolute;
-  top: 9rem;
+  top: 10rem;
   left: 2rem;
   right: 2rem;
   color: black;
   padding: 1rem 1rem 1rem 2rem;
   font-family: 'HelveticaNeueRegular', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.573rem;
   font-weight: 400;
   border-radius: 1rem;
   display: none;
@@ -396,7 +416,6 @@
   width: 4px;
   height: 100%;
   background: #27C83F;
-  border-radius: 2px;
 }
 
 /* Hover Effects */

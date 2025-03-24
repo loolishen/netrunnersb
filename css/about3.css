@@ -129,7 +129,7 @@
     font-family: 'HelveticaNeueLight', sans-serif; /* Updated font family */
     color: black;
     text-decoration: none;
-    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    font-size: clamp(0.9rem, 1.333rem, 1.1rem);
     font-weight: normal; /* Use normal weight for the light font */
   }
 
@@ -193,11 +193,12 @@
 
   .top-left-text{
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 30px;
     color: #27C83F;
     padding: 1rem;
     border-radius: 1rem;
+    
   }
 
   .bottom-right-text {
@@ -216,17 +217,17 @@
 
   .top-left-text h2 {
     font-family: 'HelveticaNeueBlack';
-    font-size: 55px;
-    margin-bottom: 0.5rem;
+    font-size: 4.583rem;
+    line-height: 1;
   }
 
   .top-left-text p{
     font-family: 'HelveticaNeueRegular';
-    font-weight: 400;
+    font-weight: 450;
     color: black;
     margin: 0;
-    width: 354px;
-    font-size:1.25rem;
+    width: 450px;
+    font-size:1.667rem;
     line-height: 0.95; letter-spacing: 0.20px; word-wrap: break-word;
   }
   .bottom-right-text p {
@@ -235,7 +236,7 @@
     color: black;
     margin: 0;
     width: 400px;
-    font-size:1.2rem;
+    font-size:1.5rem;
     line-height: 26px; letter-spacing: 0.20px; word-wrap: break-word;
   }
 
@@ -277,7 +278,7 @@
     left: 0;
     top: 0;
     width: 3px;
-    height: 75%;
+    height: 80%;
     background-color: #27C83F;
     border-radius: 1px;
   }
@@ -285,7 +286,7 @@
   .p2 .green-line-text .title {
     font-family: 'HelveticaNeueBold';
     color: #27C83F;
-    font-size: 22px;
+    font-size: 1.833rem;
     font-weight: 700;
     line-height: 1.4;
     margin-bottom: 0.5rem;
@@ -293,9 +294,9 @@
 
   .p2 .green-line-text .desc {
     font-family: 'HelveticaNeueRegular';
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.2;
     color: black;
     margin: 0;
     margin-bottom: 7rem;
@@ -337,8 +338,8 @@
   
   .top-right-text{
     position: absolute;
-    top: 12rem;
-    right: 8rem;
+    top: 10rem;
+    right: 0;
     color: white;
     padding: 1rem;
     border-radius: 1rem;
@@ -346,7 +347,7 @@
 
   .top-right-text h2 {
     font-family: 'HelveticaNeueBold';
-    font-size: 55px;
+    font-size: 4.583rem;
     margin-bottom: 10px;
   }
 
@@ -356,7 +357,7 @@
     color: white;
     margin: 0;
     width: auto;
-    font-size:1.25rem;
+    font-size:1.5rem;
     line-height: 0.95; letter-spacing: 0.20px; word-wrap: break-word;
   }
   
@@ -383,9 +384,9 @@
 
   .p4 .green-line-text .desc {
     font-family: 'HelveticaNeueRegular';
-    font-size: 20px;
+    font-size: 1.667rem;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.2;
     color: white;
     margin: 0;
     width: 100%;
@@ -402,8 +403,9 @@
 
   .p5 .top-left-text h2 {
     font-family: 'HelveticaNeueBold';
-    font-size: 55px;
+    font-size: 4.583rem;
     line-height: 0.95;
+    margin-bottom: 1rem;
   }
 
  /* ---------- p6 Section ---------- */
@@ -426,9 +428,9 @@
 
 .p6 .green-line-text .desc {
   font-family: 'HelveticaNeueRegular';
-  font-size: 20px;
+  font-size: 1.667rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.1;
   color: black;
   margin: 0;
   width: 100%;

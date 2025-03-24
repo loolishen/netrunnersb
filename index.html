@@ -13,22 +13,40 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-left">
-            <img src="assets/NetRunner-Red-white-text.png">           
-        </div>
-        <nav class="navigation">
-          <!-- remove netrunnersb before deploy and just use the foldername -->
-            <a href="/home" class="home">HOME</a>
-            <a href="/netrunnersb/about" class="aboutus">ABOUT&nbsp;US</a> 
-            <a href="/digitalpark" class="digitalpark">DIGITAL&nbsp;PARK</a>
-            <a href="/industriesandpartners" class="industriesandpartners">
-              INDUSTRIES<br> &amp;&nbsp;PARTNERS
-            </a>
-            <a href="/contact" class="contact">CONTACT&nbsp;US</a>
-          </nav>
-          
-    </header>
+
+  <header>
+    <div class="header-left">
+      <img src="assets/NetRunner-Red-white-text.png" alt="Logo">
+    </div>
+    <nav class="navigation">
+      <a href="/home" class="home">HOME</a>
+      <a href="/netrunnersb/about" class="aboutus">ABOUT&nbsp;US</a> 
+      <a href="/digitalpark" class="digitalpark">DIGITAL&nbsp;PARK</a>
+      <a href="/industriesandpartners" class="industriesandpartners">
+        INDUSTRIES<br> &amp;&nbsp;PARTNERS
+      </a>
+      <a href="/contact" class="contact">CONTACT&nbsp;US</a>
+    </nav>
+    <!-- The burger icon (shown on mobile) -->
+    <div class="menu-toggle">&#9776;</div>
+    
+  </header>
+
+  <!-- Fullscreen Overlay (hidden by default) -->
+  <div class="navigation-overlay">
+    <!-- Use the same .navigation class for your links -->
+    <div class="overlay-close">&times;</div>
+    <nav class="navigation">
+      <a href="/home" class="home">HOME</a>
+      <a href="/netrunnersb/about" class="aboutus">ABOUT&nbsp;US</a> 
+      <a href="/digitalpark" class="digitalpark">DIGITAL&nbsp;PARK</a>
+      <a href="/industriesandpartners" class="industriesandpartners">
+        INDUSTRIES<br> &amp;&nbsp;PARTNERS
+      </a>
+      <a href="/contact" class="contact">CONTACT&nbsp;US</a>
+    </nav>
+  </div>
+
 
     <container>
       <section class="hero-section">
@@ -81,7 +99,7 @@
       <div class="row">
         <!-- Main Card Left (4.5/12 width) -->
         <div class="col-md-5 pr-md-3 mb-4" style="flex: 0 0 37.5%; max-width: 37.5%;">
-          <div class="main-card h-100 position-relative overflow-hidden">
+          <div class="main-card position-relative overflow-hidden">
             <img src="assets/homepage/Rectangle 190.png" alt="Main Feature" class="img-fluid w-100 h-100 object-fit-cover position-absolute">
             <div class="top-left-text position-relative p-4 z-1">
               <h4 class="feature-title">Digital Economy Enabler</h4>
@@ -139,7 +157,7 @@
               
               <!-- Top-right title + paragraph -->
               <div class="top-right-text">
-                <h2>Building.<br><h2 style="color: black;">Tomorrow's Solutions</h2></h2>
+                <h2>Building.<br><h2 style="color: black;" class="black-top-right">Tomorrow's Solutions</h2></h2>
               </div>
               
               <!-- Bottom-right paragraph -->
@@ -187,7 +205,7 @@
           <div class="p5-card">
             <img src="assets/homepage/Rectangle 198-3.png"" alt="Card 3" class="p5-card-img">
             <div class="p5-card-content">
-              <div class="p5-title" style="top:-21rem;">Build Your Digital Ecosystem Here</div>
+              <div class="p5-title p5-title3" style="top:-21rem;">Build Your Digital Ecosystem Here</div>
               <a href="#" class="p5-link">Industries <br>Strategic partners.</a>
             </div>
           </div>
@@ -198,45 +216,82 @@
   </section>
     
       
-      <footer class="footer">
-        <div class="footer-container">
-            <!-- Logo & Description -->
-            <div class="footer-logo">
-                <img src="assets/NetRunner-Red.png" alt="Netrunner Logo">
-                <p>Technology + Sustainability.<br>Unified To Power Growth.</p>
-            </div>
-    
-            <!-- Company Links -->
-            <div class="footer-column" style="padding-left: 5vw;">
-                <h3>Company</h3>
-                <a href="/home">Home</a>
-                <a href="/aboutus">About Us</a>
-                <a href="/digitalpark">Digital Park</a>
-                <a href="/industriesandpartners" style="line-height: 18px;">Industries & Partners</a>
-                <a href="/contact">Contact Us</a>
-            </div>
-    
-            <!-- Location Details -->
-            <div class="footer-column">
-                <h3>Location</h3>
-                <p style="line-height: 20.88px;">#12-05, Capital Tower, 168 Robinson Road, Singapore 068904</p>
-                <p style="line-height: 20.88px;">18 Jalan Mawar, Taman Bunga Raya, 50000 Kuala Lumpur</p>
-            </div>
-    
-            <!-- Contact Information -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>+60-xxx-xxx-xxxx</p>
-                <p>+65-xxx-xxx-xxxx</p>
-                <p>NetRunner@gmail.com</p>
-            </div>
+       <!-- Footer -->
+  <footer class="footer text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Tagline -->
+        <div class="col-md-3 text-center text-md-left footer-logo mb-4 mb-md-0">
+          <img src="assets/NetRunner-Red.png" alt="Netrunner Logo" class="img-fluid mb-3">
+          <p>Technology + Sustainability.<br>Unified To Power Growth.</p>
         </div>
-    
-        <!-- Copyright Section -->
-        <div class="footer-bottom">
-            <p>Copyright © 2025 NetRunner. All rights reserved.</p>
+  
+        <!-- Company Links -->
+        <div class="col-md-3 footer-column mb-4 mb-md-0">
+          <h3>Company</h3>
+          <div class="footer-divider"></div>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="/home">Home</a></li>
+            <li class="mb-2"><a href="/aboutus">About Us</a></li>
+            <li class="mb-2"><a href="/digitalpark">Digital Park</a></li>
+            <li class="mb-2"><a href="/industriesandpartners">Industries & Partners</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
         </div>
-    </footer>
+  
+        <!-- Location -->
+      <div class="col-md-3 footer-column mb-4 mb-md-0">
+          <h3>Location</h3>
+          <div class="footer-divider"></div>
+          <p class="mb-3">
+            #12-05, Capital Tower,<br>
+            168 Robinson Road,<br>
+            Singapore 068904
+          </p>
+          <p>
+            18 Jalan Mawar,<br>
+            Taman Bunga Raya,<br>
+            50000 Kuala Lumpur
+          </p>
+        </div>
+  
+        <!-- Contact -->
+        <div class="col-md-3 footer-column">
+          <h3>Contact Us</h3>
+          <div class="footer-divider"></div>
+          <p class="mb-2">+60-xxx-xxx-xxxx</p>
+          <p class="mb-2">+65-xxx-xxx-xxxx</p>
+          <p>NetRunner@gmail.com</p>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="footer-bottom text-center mt-5">
+        <p class="mb-0">Copyright © 2025 NetRunner. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
     
-    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      const burger = document.querySelector('.menu-toggle');
+      const overlay = document.querySelector('.navigation-overlay');
+      const nav = overlay.querySelector('.navigation');
+      const closeBtn = document.querySelector('.overlay-close');
+
+      // Open overlay
+      burger.addEventListener('click', () => {
+        overlay.classList.toggle('show');
+        nav.classList.toggle('slide-in');
+      });
+
+      // Close overlay
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('show');
+        nav.classList.remove('slide-in');
+      });
+    });
+
+    </script>
 </body>
