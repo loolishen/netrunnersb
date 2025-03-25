@@ -909,6 +909,7 @@
     right: 16%;
 }
 
+
 }
 
 /* P1 & P4 Responsive Layout */
@@ -1077,6 +1078,25 @@
   .p5 .row.g-4 > div {
     margin-bottom: 2rem;  /* Or whatever spacing you like */
   }
+
+  .footer-column,
+  .footer-logo {
+    text-align: center !important;
+  }
+
+  /* Optionally, center them horizontally within the row */
+  .footer .row {
+    justify-content: center;
+  }
+
+  .footer-divider {
+    width: 60px;
+    height: 0;
+    border-top: 2px solid #27C83F;
+    margin-bottom: 1.5rem;
+    left: 10.2rem;
+    position: relative;
+}
 }
 
 
@@ -1175,5 +1195,136 @@
     color: #fff;
     cursor: pointer;
     z-index: 1001;
+  }
+}
+
+/* ========== THIS IS FOR LAPTOP 1024 SIZE ========== */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /* Example: Adjust font size or grid behavior */
+  html {
+    font-size: 15px;
+    overflow-x: hidden;
+  }
+
+  .contact-subtext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .contact-subtext p {
+    margin-bottom: 0;
+  }
+
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 180%;
+    right: 85%;
+  }
+
+  .navigation {
+    position: relative;
+    align-items: flex-end;
+    display: flex
+;
+    flex-wrap: nowrap;
+    gap: 2.5vw;
+    top: -1.8rem;
+    left: 6rem;
+  }
+
+  .p1 .top-left-text{
+    left: 0rem;
+  }
+
+  .top-left-text h2 {
+    font-family: 'HelveticaNeueBold';
+    font-size: 2.75rem;
+    margin-bottom: 0.5rem;
+    line-height: 0.95;
+  }
+
+  .bottom-right-text{
+    position: relative;
+    bottom: 23rem;
+    left: 21rem;
+  }
+  .bottom-right-text p{
+    font-size: 1.35rem;
+  }
+
+  .main-card {
+    border-radius: 42px;
+    border: 1.68px solid #27C83F;
+    color: white;
+    min-height: 643px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .p3 .top-left-text{
+    left: 0rem;
+  }
+
+  .p3 .top-left-text p{
+    width: 200px;
+  }
+
+  .p4 .top-right-text h2{
+    font-size: 2.75rem;
+  }
+
+  .p4 .bottom-left-text p{
+    width: 250px;
+  }
+
+  .p5-title{
+    top: -11rem;
+    left: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .p5-title::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    width: 4px;
+    height: 60px;
+    background: white;
+    transition: background 0.3s ease;
+  }
+
+  .p5-title2{
+    top: -9rem !important;
+  }
+
+  .p5-title3{
+    top: -7.5rem !important;
+  }
+
+  .footer img {
+    margin-top: 0rem;
+
+}
+
+}
+
+/* ========== THIS IS FOR LAPTOP L SIZE ========== */
+@media (min-width: 1440px) {
+  html {
+    font-size: 17px;
+  }
+
+  .contact-subtext {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* if you want 3 blocks horizontally */
+    gap: 2rem;
+  }
+
+  .contact-subtext p {
+    margin-bottom: 0;
   }
 }
