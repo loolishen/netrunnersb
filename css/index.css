@@ -1169,8 +1169,8 @@
   /* Overlay close button if you like */
   .overlay-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 4.5rem;
     font-size: 2rem;
     color: #fff;
     cursor: pointer;

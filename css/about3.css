@@ -134,13 +134,13 @@
   }
 
   /* Style for the active "HOME" link */
-  .navigation .digitalpark {
+  .navigation .aboutus {
     color: #27C83F; /* Green color */
     font-weight: bold;
   }
 
   /* Underline Effect */
-  .navigation .digitalpark::after {
+  .navigation .aboutus::after {
     content: "";
     display: block;
     width: 3vw;
@@ -871,8 +871,8 @@
   /* Overlay close button if you like */
   .overlay-close {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 4.5rem;
     font-size: 2rem;
     color: #fff;
     cursor: pointer;

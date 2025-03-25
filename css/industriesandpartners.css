@@ -289,12 +289,14 @@
   
   
   .text-box .title {
+    font-family: 'HelveticaNeueBold';
     font-size: 1.667rem;
     font-weight: 700;
     color: #27C83F;
   }
   
   .text-box .desc {
+    font-family: 'HelveticaNeueRegular';
     font-size: 1.5rem;
     font-weight: 400;
     color:black;
@@ -490,3 +492,356 @@
     letter-spacing: 0.2px;
   }
   
+
+/* ============================ */
+/* Minimal Custom Adjustments */
+/* (Bootstrap’s grid and utilities handle most responsiveness) */
+/* ============================ */
+/* P3: Make grid responsive by stacking */
+@media (max-width: 992px) {
+  .p3 .main-card,
+  .p3 .feature-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .p3 .row > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .p3 .col-md-7.d-flex {
+    flex-direction: column;
+  }
+
+  .p3 .feature-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ---------------------------------------- */
+/* MEDIA QUERIES for Mobile vs Desktop      */
+/* ---------------------------------------- */
+@media (max-width: 768px) {
+  /* Show burger menu on mobile */
+  .menu-toggle {
+    display: block;
+  
+  }
+
+  /* Hide your normal desktop nav layout on small screens 
+      if you want only the overlay approach. */
+  header .navigation {
+    display: none !important;
+  }
+
+  /* But when inside the .navigation-overlay, your .navigation reappears 
+      in "overlay form". So we can make a separate rule or rely on nesting. */
+  .navigation-overlay .navigation {
+    display: flex !important;
+  }
+
+  
+  /* ---------------------------------------- */
+  /* OVERLAY for Mobile Navigation            */
+  /* ---------------------------------------- */
+  .navigation-overlay {
+    position: fixed;      /* covers entire viewport */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.774);
+    display: none;        /* hidden by default */
+    z-index: 1000;        /* on top of other elements */
+    overflow: hidden;     /* no scrolling behind */
+  }
+
+  /* When toggled, the overlay is visible */
+  .navigation-overlay.show {
+    display: block;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    display: flex;             /* override desktop to stack vertically on mobile? */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    padding-top: 4rem;         /* spacing at top if you like */
+  }
+
+  /* Slide in from top when toggled */
+  .navigation.slide-in {
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: none;       /* shown only on mobile */
+    position: absolute;  /* or fixed, if you want it to remain in view on scroll */
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 2000;       /* must be higher than .navigation-overlay's 1000 */
+  }
+
+
+  /* ---------------------------------------- */
+  /* NAV LINKS in the overlay                 */
+  /* ---------------------------------------- */
+  .navigation a {
+    font-family: 'HelveticaNeueLight', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 1rem 0;
+    display: block;
+    text-align: center;
+  }
+
+  .overlay-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 2001; /* ensure it's clickable above the nav links */
+  }
+}
+  
+/* =================================================== */
+/* =================================================== */
+/* =================================================== */
+/* THIS IS FOR MOBILE HEADER */
+@media (max-width: 600px) {
+  html {
+    font-size: 11px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* NAVIGATION: Convert to side menu */
+  .navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.068);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+  }
+
+  .navigation.show {
+    transform: translateX(0);
+  }
+
+  .navigation a {
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 0;
+  }
+
+  header .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 50%;
+    right: 14%;
+}
+}
+  
+  /* THIS IS FOR SCREEN SIZES BELOW 768px*/
+@media (max-width: 768px) {
+
+  html {
+    font-size: 13px;
+  }
+
+  .image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 29rem !important;
+    margin-bottom: 0;
+  }
+
+  .top-left-text {
+    position: absolute;
+    top: 9rem;
+    left: -1rem;
+    color: #27C83F;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .top-left-text h2{
+    font-size: 3rem;
+  }
+
+  .top-left-text p{
+    width: 275px;
+  }
+
+  .p3 h1{
+    font-size: 3rem;
+  }
+
+  .mobile-park-list {
+    /* Add padding or margin if needed */
+    margin: 0 auto 1rem auto;
+    width: 75vw;
+
+  }
+  
+  .mobile-park-item {
+    /* Spacing between items */
+    margin-bottom: 14rem;
+  }
+  
+  .mobile-park-item .text-box {
+    /* Adjust text styling, alignment, etc. */
+    margin-top: 0.5rem;
+   
+  }
+
+  .mobile-park-item .desc{
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    position: relative;
+    left: -1rem;
+    width: 320px;
+  }
+
+  .mobile-park-item .title{
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    position: relative;
+    left: -1rem;
+    width: 320px;
+    color: white;
+  }
+
+  .edge-computing-card{
+    margin-bottom: 20rem;
+  }
+
+  
+
+  .footer-column,
+  .footer-logo {
+    text-align: center !important;
+  }
+
+  /* Optionally, center them horizontally within the row */
+  .footer .row {
+    justify-content: center;
+  }
+
+  .footer-divider {
+    width: 60px;
+    height: 0;
+    border-top: 2px solid white;
+    margin-bottom: 1.5rem;
+    left: 9.2rem;
+    position: relative;
+}
+  
+}
+/* =================================================== */
+/* =================================================== */
+/* =================================================== */
+
+
+/* ========== Desktop (min-width: 769px) ========== */
+@media (min-width: 769px) {
+  /* Show the nav in the header */
+  header .navigation {
+    display: flex; /* or whatever your layout is */
+  }
+  /* Hide the burger */
+  .menu-toggle {
+    display: none;
+  }
+  /* Hide the overlay entirely */
+  .navigation-overlay {
+    display: none !important; /* never show on desktop */
+  }
+}
+
+/* ========== Mobile (max-width: 768px) ========== */
+@media (max-width: 768px) {
+  /* Hide the desktop nav in the header */
+  header .navigation {
+    display: none !important;
+  }
+
+  /* Show the burger */
+  .menu-toggle {
+    display: block; 
+    position: absolute; /* or wherever you prefer */
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    color: white;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  /* The overlay nav is shown only if toggled .show in JS */
+  .navigation-overlay {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+    overflow: hidden;
+  }
+  .navigation-overlay.show {
+    display: block;
+  }
+
+  /* The nav inside the overlay becomes vertical */
+  .navigation-overlay .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    width: 100%;
+    height: 100%;
+  }
+  .navigation-overlay .navigation.slide-in {
+    transform: translateY(0);
+  }
+
+  /* Overlay close button if you like */
+  .overlay-close {
+    position: absolute;
+    top: 2rem;
+    right: 4.5rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}
