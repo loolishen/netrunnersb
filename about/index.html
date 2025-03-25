@@ -26,9 +26,27 @@
           INDUSTRIES<br> &amp;&nbsp;PARTNERS
         </a>
         <a href="/contact" class="contact">CONTACT&nbsp;US</a>
+
+        <!-- The burger icon (shown on mobile) -->
+      <div class="menu-toggle">&#9776;</div>
       </nav>
       
-</header>
+  </header>
+
+  <div class="navigation-overlay">
+    <!-- Use the same .navigation class for your links -->
+    <div class="overlay-close">&times;</div>
+    <nav class="navigation">
+      <a href="/home" class="home">HOME</a>
+      <a href="/netrunnersb/about" class="aboutus">ABOUT&nbsp;US</a> 
+      <a href="/digitalpark" class="digitalpark">DIGITAL&nbsp;PARK</a>
+      <a href="/industriesandpartners" class="industriesandpartners">
+        INDUSTRIES<br> &amp;&nbsp;PARTNERS
+      </a>
+      <a href="/contact" class="contact">CONTACT&nbsp;US</a>
+    </nav>
+  </div>
+
 
   <!-- p1 Section -->
   <div class="p1">
@@ -156,7 +174,7 @@
       <div class="row">
         <!-- Logo & Tagline -->
         <div class="col-md-3 text-center text-md-left footer-logo mb-4 mb-md-0">
-          <img src="assets/NetRunner-Red-white-text.png" alt="Netrunner Logo" class="img-fluid mb-3">
+          <img src="../assets/NetRunner-Red-white-text.png" alt="Netrunner Logo" class="img-fluid mb-3">
           <p>Technology + Sustainability.<br>Unified To Power Growth.</p>
         </div>
   
@@ -205,6 +223,27 @@
     </div>
   </footer>
   
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const burger = document.querySelector('.menu-toggle');
+    const overlay = document.querySelector('.navigation-overlay');
+    const nav = overlay.querySelector('.navigation');
+    const closeBtn = document.querySelector('.overlay-close');
+
+    // Open overlay
+    burger.addEventListener('click', () => {
+      overlay.classList.toggle('show');
+      nav.classList.toggle('slide-in');
+    });
+
+    // Close overlay
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('show');
+      nav.classList.remove('slide-in');
+    });
+  });
+
+  </script>
 
   
 
