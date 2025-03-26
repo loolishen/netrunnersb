@@ -207,18 +207,6 @@
   line-height: 1;
 }
 
-.text-box.bottom-left {
-  bottom: 4rem;
-  left: 3rem;
-  width: 550px;
-}
-
-.text-box.top-right {
-  top: 3rem;
-  right: 0rem;
-  width:550px;
-}
-
 
 .carousel-inner {
   width: 75vw;
@@ -239,7 +227,7 @@
   border-radius: 1rem;
   object-fit: cover;
   background-color: white;
-  border-radius: 4rem;
+  border-radius: 6rem;
 }
 
 .text-box {
@@ -251,17 +239,29 @@
   
 }
 
-.bottom-left { bottom: 55px; left: 50px; }
-.top-right { top: 20px; right: 30px; }
+.text-box.bottom-left { 
+  bottom:5rem;
+  left: 4rem;
+  width: 700px;
+}
+
+.text-box.top-right {
+  top: 3rem;
+  right: 0rem;
+  width: 650px;
+}
 
 .text-box .title {
-  font-size: 1.667rem;
+  font-family: 'HelveticaNeueBold';
+  font-size: 3rem;
   font-weight: 700;
   color: #27C83F;
+  width: 700px;
 }
 
 .text-box .desc {
-  font-size: 1.5rem;
+  font-family: 'HelveticaNeueRegular';
+  font-size: 2rem;
   font-weight: 400;
 }
 
@@ -916,9 +916,9 @@
     position: relative;
     top: -1vw;
     height: 50%;
-    width: 180%;
-    right: 85%;
-  }
+    width: 12rem;
+    right: 50%;
+}
 
   .navigation {
     position: relative;
@@ -928,7 +928,7 @@
     flex-wrap: nowrap;
     gap: 2.5vw;
     top: -1.8rem;
-    left: 3rem;
+    left: 0rem;
   }
 
   .industriesandpartners{
@@ -1028,9 +1028,9 @@
 
 
 /* ========== THIS IS FOR LAPTOP L SIZE ========== */
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   html {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .contact-subtext {
@@ -1041,5 +1041,116 @@
 
   .contact-subtext p {
     margin-bottom: 0;
+  }
+
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 13rem;
+    right: 54%;
+  }
+  
+  .navigation {
+    position: relative;
+    align-items: flex-end;
+    display: flex
+;
+    flex-wrap: nowrap;
+    gap: 2.5vw;
+    top: -2rem;
+  }
+
+  .industriesandpartners{
+    position: relative;
+    top:0rem !important;
+  }
+  
+  .p1container .title {
+    font-size: 2.75rem;
+    line-height: 1;
+    font-family: 'HelveticaNeueBlack';
+  }
+
+  .p1container p {
+    font-size: 1.25rem;
+    line-height: 1;
+    font-family: 'HelveticaNeueRegular';
+    word-wrap: break-word;
+    width: 345px;
+    position: relative;
+    left: 0rem;
+  }
+
+  .highlight-bar{
+    margin-left: 0rem;
+  }
+
+  .p2 h1 {
+    font-size: 3.5rem;
+    font-family: 'HelveticaNeueBold', sans-serif;
+    margin-bottom: 3rem;
+  }
+
+  .text-box .title {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #27C83F;
+  }
+  .text-box .desc {
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .text-box.bottom-left { 
+    bottom: 2rem;
+    left: 2rem;
+    width: 390px;
+  }
+  
+  .text-box.top-right {
+    top: 1rem;
+    right: 6rem !important;
+    width: 430px;
+  }
+
+  .p5 h1 {
+    font-size: 3rem;
+    font-family: 'HelveticaNeueBold', sans-serif;
+    margin-bottom: 4rem;
+    color: #27C83F;
+}
+
+  .p5-title {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02vw;
+    color: white;
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    margin-bottom: 1.5rem;
+    z-index: 2;
+    pointer-events: auto;
+  }
+
+  .p5-title::before{
+    height: 60px;
+  }
+
+  .p5-desc{
+    font-size: 1.25rem;
+  }
+
+
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 16px;
   }
 }

@@ -1,0 +1,783 @@
+@font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url('../../font/HelveticaNeueMedium.woff2') format('woff2'),
+         url('../../font/HelveticaNeueMedium.otf') format('opentype');
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../../font/HelveticaNeueLight.woff2') format('woff2'),
+         url('../../font/HelveticaNeueLight.otf') format('opentype');
+    font-weight: 300;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('../../font/HelveticaNeueBold.woff2') format('woff2'),
+         url('../../font/HelveticaNeueBold.otf') format('opentype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueRegular';
+    src: url('../../font/helveticaneue.woff2') format('woff2'),
+         url('../../font/helveticaneue.otf') format('opentype');
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueBlack';
+    src: url('../../font/HelveticaNeueBlack.woff2') format('woff2'),
+         url('../../font/HelveticaNeueBlack.otf') format('opentype');
+    font-weight: 900;
+  }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased; /* Smooth fonts */
+      -moz-osx-font-smoothing: grayscale;
+      /* outline: 1px solid red; */
+    }
+      
+    html {
+      font-size: 16px; /* Base for rem units if needed */
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow-x: hidden;
+    }
+  
+    html, body {
+      height: 100%;
+    }
+    
+  /* ////////////////// */
+      /* Navigation section */
+      /* ////////////////// */
+      header {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 83vw;
+        padding: 0 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 100;
+        overflow-x: hidden;
+      }
+      
+      /* 
+        Assuming a 1920px width, -1.1rem (~17.6px) is roughly 0.9vw.
+        Adjust the value if needed.
+      */
+      .header-left img {
+        position: relative;
+        top: -1vw;
+        height: 50%;
+        width: 50%;
+        right:28%;
+      }
+      
+      .navigation {
+        position: relative;
+        top: -1vw;  /* -1vw approximates the -1.1rem offset */
+        display: flex;
+        flex-wrap: nowrap;
+        /* 3rem ≈ 48px => about 2.5vw on a 1920px width */
+        gap: 2.5vw;
+        left: 8%
+      }
+      
+      .navigation a {
+        font-family: 'HelveticaNeueLight', sans-serif; /* Updated font family */
+        color: black;
+        text-decoration: none;
+        font-size: clamp(0.9rem, 1.333rem, 2.1rem);
+        font-weight: normal; /* Use normal weight for the light font */
+        position: relative;
+    
+      }
+    
+      .navigation .industriesandpartners {
+        color: #27C83F; /* Green color */
+        font-weight: bold;
+      }
+    
+      .navigation a.active::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #27C83F;
+      }
+      
+      .navigation .industriesandpartners {
+        position: relative;
+        /* -1.3rem (~20.8px) ≈ 1vw */
+        top: -1vw;
+      }
+      
+      @media (max-width: 600px) {
+        .navigation {
+          /* 1rem ≈ 16px → roughly 0.8vw on a 1920px design; adjust if needed */
+          gap: clamp(0.8rem, 1vw, 1rem);
+        }
+        
+        .navigation a {
+          font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+        }
+      }
+  
+      .container {
+          max-width: 75vw !important;
+        }
+  
+  
+  
+  /* p1 section */
+  
+  .contact-section {
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  }
+  
+  .contact-section .row {
+  display: flex;
+  align-items: stretch; /* This ensures both columns are equal height */
+  }
+  
+  .contact-section .container {
+  max-width: 75vw;
+  }
+  
+  .contact-title {
+  font-size: 4.3rem;
+  font-family: 'HelveticaNeueBlack', sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0.55px;
+  }
+  
+  .contact-title .green {
+  color: #27C83F;
+  }
+  
+  .contact-title .black {
+  color: black;
+  }
+  
+  .contact-subtext {
+  font-size: 1.667rem;
+  font-family: 'HelveticaNeueRegular', sans-serif;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+  width: 600px;
+  }
+  
+  /* Form Labels */
+  
+  
+  .custom-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'HelveticaNeueBold', sans-serif;
+  color: #27C83F;
+  }
+  
+  /* Inputs */
+  .custom-input {
+  border: 1px solid #27C83F;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-family: 'HelveticaNeueRegular', sans-serif;
+  padding: 0.75rem 1rem;
+  color: #000;
+  background-color: #fff;
+  }
+  
+  /* Default input size (90%) */
+  .custom-input {
+  width: 90%;
+  }
+  
+  /* Smaller input for First & Last Name (80%) */
+  .custom-input-sm {
+  width: 80%;
+  }
+  
+  /* Button */
+  .submit-btn {
+  background-color: #27C83F;
+  color: white;
+  font-size: 22px;
+  font-family: 'HelveticaNeueBold', sans-serif;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 0.22px;
+  transition: transform 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+  transform: scale(1.03);
+  }
+  
+  /* Image */
+  .contact-image {
+  border-radius: 50px;
+  max-height: 100%;
+  object-fit: cover; /* or cover depending on your goal */
+  width: 100%;
+  display: block;
+  }
+  
+  
+  /* ---------- Footer ---------- */
+  .footer {
+    background-color: #27C83F;
+  }
+  
+  .footer img{
+    margin-top:-3rem;
+    margin-left: -3rem;
+    margin-bottom: 0;
+  }
+  
+  .footer a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.4px;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    color: white;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .footer p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .footer-logo p {
+    margin-top: -2rem;
+  }
+  
+  .footer-divider {
+    width: 60px;
+    height: 0;
+    border-top: 2px solid white;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-bottom p {
+    margin-top: 3rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.2px;
+  }
+  
+  /* ============================ */
+  /* Minimal Custom Adjustments */
+  /* (Bootstrap’s grid and utilities handle most responsiveness) */
+  /* ============================ */
+  /* P3: Make grid responsive by stacking */
+  @media (max-width: 992px) {
+    .p3 .main-card,
+    .p3 .feature-card {
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  
+    .p3 .row > div {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .p3 .col-md-7.d-flex {
+      flex-direction: column;
+    }
+  
+    .p3 .feature-card {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  /* ---------------------------------------- */
+  /* MEDIA QUERIES for Mobile vs Desktop      */
+  /* ---------------------------------------- */
+  @media (max-width: 768px) {
+    /* Show burger menu on mobile */
+    .menu-toggle {
+      display: block;
+    
+    }
+  
+    /* Hide your normal desktop nav layout on small screens 
+        if you want only the overlay approach. */
+    header .navigation {
+      display: none !important;
+    }
+  
+    /* But when inside the .navigation-overlay, your .navigation reappears 
+        in "overlay form". So we can make a separate rule or rely on nesting. */
+    .navigation-overlay .navigation {
+      display: flex !important;
+    }
+  
+    
+    /* ---------------------------------------- */
+    /* OVERLAY for Mobile Navigation            */
+    /* ---------------------------------------- */
+    .navigation-overlay {
+      position: fixed;      /* covers entire viewport */
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.774);
+      display: none;        /* hidden by default */
+      z-index: 1000;        /* on top of other elements */
+      overflow: hidden;     /* no scrolling behind */
+    }
+  
+    /* When toggled, the overlay is visible */
+    .navigation-overlay.show {
+      display: block;
+    }
+  
+    .navigation {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      display: flex;             /* override desktop to stack vertically on mobile? */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+      padding-top: 4rem;         /* spacing at top if you like */
+    }
+  
+    /* Slide in from top when toggled */
+    .navigation.slide-in {
+      transform: translateY(0);
+    }
+  
+    .menu-toggle {
+      display: none;       /* shown only on mobile */
+      position: absolute;  /* or fixed, if you want it to remain in view on scroll */
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      z-index: 2000;       /* must be higher than .navigation-overlay's 1000 */
+    }
+  
+  
+    /* ---------------------------------------- */
+    /* NAV LINKS in the overlay                 */
+    /* ---------------------------------------- */
+    .navigation a {
+      font-family: 'HelveticaNeueLight', sans-serif;
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      margin: 1rem 0;
+      display: block;
+      text-align: center;
+    }
+  
+    .overlay-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      z-index: 2001; /* ensure it's clickable above the nav links */
+    }
+  }
+    
+  /* =================================================== */
+  /* =================================================== */
+  /* =================================================== */
+  /* THIS IS FOR MOBILE HEADER */
+  @media (max-width: 600px) {
+    html {
+      font-size: 11px;
+    }
+  
+    body {
+      overflow-x: hidden;
+    }
+  
+    /* NAVIGATION: Convert to side menu */
+    .navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.068);
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+  
+    .navigation.show {
+      transform: translateX(0);
+    }
+  
+    .navigation a {
+      font-size: 1.5rem;
+      color: white;
+      padding: 1rem 0;
+    }
+  
+    header .menu-toggle {
+      display: block;
+      position: absolute;
+      right: 1rem;
+      top: 2rem;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+  
+    .header-left img {
+      position: relative;
+      top: -1vw;
+      height: 50%;
+      width: 50%;
+      right: 14%;
+  }
+  }
+    
+    /* THIS IS FOR SCREEN SIZES BELOW 768px*/
+  @media (max-width: 767px) {
+  
+    html {
+      font-size: 13px;
+    }
+  
+    .contact-subtext {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+      width: 270px;
+    }
+  
+    .image{
+      display: none !important;
+    }
+  
+  
+    .footer-column,
+    .footer-logo {
+      text-align: center !important;
+    }
+  
+    /* Optionally, center them horizontally within the row */
+    .footer .row {
+      justify-content: center;
+    }
+  
+    .footer-divider {
+      width: 60px;
+      height: 0;
+      border-top: 2px solid white;
+      margin-bottom: 1.5rem;
+      left: 9.2rem;
+      position: relative;
+  }
+    
+  }
+  /* =================================================== */
+  /* =================================================== */
+  /* =================================================== */
+  
+  
+  /* ========== Desktop (min-width: 769px) ========== */
+  @media (min-width: 769px) {
+    /* Show the nav in the header */
+    header .navigation {
+      display: flex; /* or whatever your layout is */
+    }
+    /* Hide the burger */
+    .menu-toggle {
+      display: none;
+    }
+    /* Hide the overlay entirely */
+    .navigation-overlay {
+      display: none !important; /* never show on desktop */
+    }
+  }
+  
+  /* ========== Mobile (max-width: 768px) ========== */
+  @media (max-width: 768px) {
+    /* Hide the desktop nav in the header */
+    header .navigation {
+      display: none !important;
+    }
+  
+    /* Show the burger */
+    .menu-toggle {
+      display: block; 
+      position: absolute; /* or wherever you prefer */
+      right: 1rem;
+      top: 1rem;
+      font-size: 2rem;
+      color: white;
+      z-index: 1000;
+      cursor: pointer;
+    }
+  
+    /* The overlay nav is shown only if toggled .show in JS */
+    .navigation-overlay {
+      display: none; /* hidden by default */
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 999;
+      overflow: hidden;
+    }
+    .navigation-overlay.show {
+      display: block;
+    }
+  
+    /* The nav inside the overlay becomes vertical */
+    .navigation-overlay .navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: transform 0.4s ease;
+      width: 100%;
+      height: 100%;
+    }
+    .navigation-overlay .navigation.slide-in {
+      transform: translateY(0);
+    }
+  
+    /* Overlay close button if you like */
+    .overlay-close {
+      position: absolute;
+      top: 2rem;
+      right: 4.5rem;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1001;
+    }
+  }
+  
+  /* ========== THIS IS FOR LAPTOP 1024 SIZE ========== */
+  @media (min-width: 1024px) and (max-width: 1439px) {
+    /* Example: Adjust font size or grid behavior */
+    html {
+      font-size: 16px;
+    }
+  
+    .contact-subtext {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* if you want 3 blocks horizontally */
+      gap: 2rem;
+    }
+  
+    .contact-subtext p {
+      margin-bottom: 0;
+    }
+    
+    .header-left img {
+      position: relative;
+      top: -1vw;
+      height: 50%;
+      width: 12rem;
+      right: 50%;
+  }
+  
+    .navigation {
+      position: relative;
+      align-items: flex-end;
+      display: flex
+  ;
+      flex-wrap: nowrap;
+      gap: 2.5vw;
+      top: -1.8rem;
+      left: 0rem;
+    }
+  
+    .industriesandpartners{
+      position: relative;
+      top:0rem !important;
+    }
+  
+  
+    /* .image{
+      display: none !important;
+    } */
+  
+    .contact-image {
+      border-radius: 50px;
+      max-height: 100%;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+      position: relative;
+      top: 22.5rem;
+      right: -2rem;
+  }
+  
+    .contact-title {
+      font-size: 4.3rem;
+      font-family: 'HelveticaNeueBlack', sans-serif;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: 0.55px;
+      width: 650px;
+    }
+  
+    .contact-subtext {
+      font-size: 1.667rem;
+      font-family: 'HelveticaNeueRegular', sans-serif;
+      font-weight: 400;
+      color: black;
+      letter-spacing: 0.2px;
+      line-height: 1.5;
+      width: 1160px;
+    }
+  
+    .custom-input-sm {
+      width: 100%;
+    }
+  
+    .custom-input{
+      width: 100%;
+    }
+  
+  
+  
+  .footer img {
+    margin-top: 0rem;
+  
+  }
+  
+  }
+  
+  
+  
+  
+  /* ========== THIS IS FOR LAPTOP L SIZE ========== */
+  @media (min-width: 1440px) and (max-width: 1919px) {
+    html {
+      font-size: 16px;
+    }
+  
+    .contact-subtext {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* if you want 3 blocks horizontally */
+      gap: 2rem;
+    }
+  
+    .contact-subtext p {
+      margin-bottom: 0;
+    }
+    
+    .header-left img {
+      position: relative;
+      top: -1vw;
+      height: 50%;
+      width: 12rem;
+      right: 50%;
+  }
+  
+    .navigation {
+      position: relative;
+      align-items: flex-end;
+      display: flex
+  ;
+      flex-wrap: nowrap;
+      gap: 2.5vw;
+      top: -1.8rem;
+      left: 0rem;
+    }
+  
+    .industriesandpartners{
+      position: relative;
+      top:0rem !important;
+    }
+  
+    .contact-image {
+      border-radius: 50px;
+      max-height: 100%;
+      object-fit: cover;
+      width: 100%;
+      display: block;
+      position: relative;
+      top: 11.5rem;
+      right: -2rem;
+  }
+  
+    .contact-title {
+      font-size: 4.3rem;
+      font-family: 'HelveticaNeueBlack', sans-serif;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: 0.55px;
+      width: 50rem;
+    }
+  
+    .contact-subtext {
+      font-size: 1.667rem;
+      font-family: 'HelveticaNeueRegular', sans-serif;
+      font-weight: 400;
+      color: black;
+      letter-spacing: 0.2px;
+      line-height: 1.5;
+      width: 140rem;
+    }
+  
+    .custom-input-sm {
+      width: 100%;
+    }
+  
+    .custom-input{
+      width: 100%;
+    }
+  
+  
+  
+  }
+  
+  @media (min-width: 1920px) {
+    html {
+      font-size: 16px;
+    }
+  }

@@ -1220,9 +1220,9 @@
     position: relative;
     top: -1vw;
     height: 50%;
-    width: 180%;
-    right: 85%;
-  }
+    width: 12rem;
+    right: 50%;
+}
 
   .navigation {
     position: relative;
@@ -1232,7 +1232,7 @@
     flex-wrap: nowrap;
     gap: 2.5vw;
     top: -1.8rem;
-    left: 3rem;
+    left: 0rem;
   }
 
   .p1 .top-left-text{
@@ -1313,9 +1313,9 @@
 }
 
 /* ========== THIS IS FOR LAPTOP L SIZE ========== */
-@media (min-width: 1440px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   html {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .contact-subtext {
@@ -1326,5 +1326,106 @@
 
   .contact-subtext p {
     margin-bottom: 0;
+  }
+
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 13rem;
+    right: 54%;
+  }
+  
+  .navigation {
+    position: relative;
+    align-items: flex-end;
+    display: flex
+;
+    flex-wrap: nowrap;
+    gap: 2.5vw;
+    top: -2rem;
+  }
+
+  .p1 .top-left-text{
+    left: 0rem;
+  }
+
+  .top-left-text h2 {
+    font-family: 'HelveticaNeueBold';
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 0.95;
+  }
+
+  .bottom-right-text{
+    position: relative;
+    bottom: 23rem;
+    left: 42rem;
+  }
+  .bottom-right-text p{
+    font-size: 1.35rem;
+  }
+
+  .p3-title h2{
+    font-size: 3.5rem;
+  }
+
+  .main-card {
+    border-radius: 42px;
+    border: 1.68px solid #27C83F;
+    color: white;
+    min-height: 643px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .p3 .top-left-text{
+    left: 0rem;
+  }
+
+  .p3 .top-left-text p{
+    width: 350px;
+  }
+
+  .p4 .top-right-text h2{
+    font-size: 3.5rem;
+  }
+
+  .p4 .bottom-left-text p{
+    width: 350px;
+  }
+
+  .p5-title{
+    top: -19rem;
+    left: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .p5-title::before {
+    content: "";
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    width: 4px;
+    height: 60px;
+    background: white;
+    transition: background 0.3s ease;
+  }
+
+  .p5-title2{
+    top: -19rem !important;
+  }
+
+  .p5-title3{
+    top: -17rem !important;
+  }
+
+
+
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 16px;
   }
 }

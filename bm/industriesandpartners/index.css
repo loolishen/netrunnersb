@@ -1,35 +1,35 @@
 @font-face {
     font-family: 'HelveticaNeueMedium';
-    src: url('../font/HelveticaNeueMedium.woff2') format('woff2'),
-         url('../font/HelveticaNeueMedium.otf') format('opentype');
+    src: url('../../font/HelveticaNeueMedium.woff2') format('woff2'),
+         url('../../font/HelveticaNeueMedium.otf') format('opentype');
     font-weight: 100;
   }
   
   @font-face {
     font-family: 'HelveticaNeueLight';
-    src: url('../font/HelveticaNeueLight.woff2') format('woff2'),
-         url('../font/HelveticaNeueLight.otf') format('opentype');
+    src: url('../../font/HelveticaNeueLight.woff2') format('woff2'),
+         url('../../font/HelveticaNeueLight.otf') format('opentype');
     font-weight: 300;
   }
   
   @font-face {
     font-family: 'HelveticaNeueBold';
-    src: url('../font/HelveticaNeueBold.woff2') format('woff2'),
-         url('../font/HelveticaNeueBold.otf') format('opentype');
+    src: url('../../font/HelveticaNeueBold.woff2') format('woff2'),
+         url('../../font/HelveticaNeueBold.otf') format('opentype');
     font-weight: 700;
   }
   
   @font-face {
     font-family: 'HelveticaNeueRegular';
-    src: url('../font/helveticaneue.woff2') format('woff2'),
-         url('../font/helveticaneue.otf') format('opentype');
+    src: url('../../font/helveticaneue.woff2') format('woff2'),
+         url('../../font/helveticaneue.otf') format('opentype');
     font-weight: 400;
   }
   
   @font-face {
     font-family: 'HelveticaNeueBlack';
-    src: url('../font/HelveticaNeueBlack.woff2') format('woff2'),
-         url('../font/HelveticaNeueBlack.otf') format('opentype');
+    src: url('../../font/HelveticaNeueBlack.woff2') format('woff2'),
+         url('../../font/HelveticaNeueBlack.otf') format('opentype');
     font-weight: 900;
   }
     
