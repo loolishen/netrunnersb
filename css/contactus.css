@@ -596,3 +596,116 @@ display: block;
     z-index: 1001;
   }
 }
+
+/* ========== THIS IS FOR LAPTOP 1024 SIZE ========== */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /* Example: Adjust font size or grid behavior */
+  html {
+    font-size: 15px;
+    overflow-x: hidden;
+  }
+
+  .contact-subtext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .contact-subtext p {
+    margin-bottom: 0;
+  }
+
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 180%;
+    right: 85%;
+  }
+
+  .navigation {
+    position: relative;
+    align-items: flex-end;
+    display: flex
+;
+    flex-wrap: nowrap;
+    gap: 2.5vw;
+    top: -1.8rem;
+    left: 3rem;
+  }
+
+  .industriesandpartners{
+    position: relative;
+    top:0rem !important;
+  }
+
+  /* .image{
+    display: none !important;
+  } */
+
+  .contact-image {
+    border-radius: 50px;
+    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 22.5rem;
+    right: -2rem;
+}
+
+  .contact-title {
+    font-size: 4.3rem;
+    font-family: 'HelveticaNeueBlack', sans-serif;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: 0.55px;
+    width: 650px;
+  }
+
+  .contact-subtext {
+    font-size: 1.667rem;
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    font-weight: 400;
+    color: black;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    width: 1160px;
+  }
+
+  .custom-input-sm {
+    width: 100%;
+  }
+
+  .custom-input{
+    width: 100%;
+  }
+
+
+
+.footer img {
+  margin-top: 0rem;
+
+}
+
+}
+
+
+
+
+/* ========== THIS IS FOR LAPTOP L SIZE ========== */
+@media (min-width: 1440px) {
+  html {
+    font-size: 17px;
+  }
+
+  .contact-subtext {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* if you want 3 blocks horizontally */
+    gap: 2rem;
+  }
+
+  .contact-subtext p {
+    margin-bottom: 0;
+  }
+}

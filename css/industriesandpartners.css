@@ -845,3 +845,120 @@
     z-index: 1001;
   }
 }
+
+
+/* ========== THIS IS FOR LAPTOP 1024 SIZE ========== */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  /* Example: Adjust font size or grid behavior */
+  html {
+    font-size: 15px;
+    overflow-x: hidden;
+  }
+
+  .contact-subtext {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .contact-subtext p {
+    margin-bottom: 0;
+  }
+
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 180%;
+    right: 85%;
+  }
+
+  .navigation {
+    position: relative;
+    align-items: flex-end;
+    display: flex
+;
+    flex-wrap: nowrap;
+    gap: 2.5vw;
+    top: -1.8rem;
+    left: 3rem;
+  }
+
+  .industriesandpartners{
+    position: relative;
+    top:0rem !important;
+  }
+
+  .p3 h1{
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .top-left-text h2{
+    font-size: 2.75rem;
+  }
+  .top-left-text p{
+    font-size: 1.25rem;
+    width: 400px;
+  }
+
+  .text-box .title {
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-size: 1.667rem;
+    font-weight: 700;
+    color: #27C83F;
+  }
+  .text-box .desc {
+    font-family: 'HelveticaNeueRegular', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    width: 350px;
+  }
+
+  .text-box.bottom-left {
+    bottom: 0rem;
+    left: 2rem;
+    width: 390px;
+  }
+
+  .text-box.top-right {
+    top: 0rem;
+    right: 0rem;
+    width: 390px;
+  }
+
+  .section-title{
+    font-size: 3rem;
+  }
+  .benefit-icon{
+    left: -2.8rem;
+  }
+
+
+
+.footer img {
+  margin-top: 0rem;
+
+}
+
+}
+
+
+
+
+/* ========== THIS IS FOR LAPTOP L SIZE ========== */
+@media (min-width: 1440px) {
+  html {
+    font-size: 17px;
+  }
+
+  .contact-subtext {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* if you want 3 blocks horizontally */
+    gap: 2rem;
+  }
+
+  .contact-subtext p {
+    margin-bottom: 0;
+  }
+}
