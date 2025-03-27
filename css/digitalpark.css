@@ -191,9 +191,11 @@
 /* P2 section */
 /* ////////// */
 
+/* ========== p2 Section ========== */
 .p2 {
   background-color: #27C83F;
   padding: 5rem 0;
+  
 }
 
 .p2 h1 {
@@ -202,69 +204,70 @@
   margin-bottom: 7rem;
 }
 
-.text-box .desc {
-  font-size: 1.5rem;
-  line-height: 1;
+/* Keep or adjust as needed for your text styling */
+.text-box {
+  /* Remove position: absolute, top/right/left/bottom, etc. */
+  /* position: absolute; <-- remove or comment out */
+  color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 80%;
+  /* If you want a bit more spacing around text, you can add margin here. */
 }
 
+/* .text-box.bottom-left, .text-box.top-right - no longer used for positioning
+   so you can remove or comment these out:
+   .text-box.bottom-left {
+     bottom: 5rem; left: 4rem; ...
+   }
+   .text-box.top-right {
+     top: 3rem; right: 0rem; ...
+   }
+*/
 
+/* Title & Desc inside .text-box */
+.text-box .title {
+  font-family: 'HelveticaNeueBold';
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #27C83F;
+  margin-bottom: 0.5rem;
+  width: 700px;
+}
+
+.text-box .desc {
+  font-family: 'HelveticaNeueRegular';
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1;
+  width: 550px; 
+  /* Adjust line-height or spacing to taste */
+}
+
+/* Carousel container & items */
 .carousel-inner {
   width: 75vw;
   margin: 0 auto;
 }
 
 .carousel-item {
-  position: relative;
+  position: relative;  /* keep this for the overlay positioning */
   border-radius: 2rem;
   overflow: hidden;
   border: 2px solid #27C83F;
   height: auto;
 }
 
+/* Main image in each slide */
 .carousel-img {
   width: 100%;
   height: auto;
-  border-radius: 1rem;
+  border-radius: 6rem; /* or 1rem, whichever you prefer */
   object-fit: cover;
   background-color: white;
-  border-radius: 6rem;
 }
 
-.text-box {
-  position: absolute;
-  color: black;
-  padding: 1rem;
-  border-radius: 1rem;
-  max-width: 80%;
-  
-}
-
-.text-box.bottom-left { 
-  bottom:5rem;
-  left: 4rem;
-  width: 700px;
-}
-
-.text-box.top-right {
-  top: 3rem;
-  right: 0rem;
-  width: 650px;
-}
-
-.text-box .title {
-  font-family: 'HelveticaNeueBold';
-  font-size: 3rem;
-  font-weight: 700;
-  color: #27C83F;
-  width: 700px;
-}
-
-.text-box .desc {
-  font-family: 'HelveticaNeueRegular';
-  font-size: 2rem;
-  font-weight: 400;
-}
-
+/* Carousel controls */
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -293,19 +296,10 @@
 }
 
 .carousel-control-next-icon {
-  background-color: white;
-  border-radius: 9999px;
-  padding: 1rem;
-  background-size: 100% 100%;
   right: -2rem;
-  
 }
 
 .carousel-control-prev-icon {
-  background-color: white;
-  border-radius: 9999px;
-  padding: 1rem;
-  background-size: 100% 100%;
   left: -1rem;
 }
 

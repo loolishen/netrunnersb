@@ -58,7 +58,7 @@
     height: 100%;
   }
   
-  /* ////////////////// */
+ /* ////////////////// */
   /* Navigation section */
   /* ////////////////// */
   header {
@@ -75,6 +75,9 @@
     overflow-x: hidden;
   }
   
+  .language {
+    white-space: nowrap; /* Force all text inside to remain on one line */
+  }
   /* 
     Assuming a 1920px width, -1.1rem (~17.6px) is roughly 0.9vw.
     Adjust the value if needed.
@@ -89,11 +92,12 @@
   
   .navigation {
     position: relative;
-    align-items: flex-end;
+    top: -1vw;  /* -1vw approximates the -1.1rem offset */
     display: flex;
     flex-wrap: nowrap;
+    /* 3rem ≈ 48px => about 2.5vw on a 1920px width */
     gap: 2.5vw;
-    top: -2rem;
+    left: 8%
   }
   
   .navigation a {
@@ -102,40 +106,20 @@
     text-decoration: none;
     font-size: clamp(0.9rem, 1.333rem, 1.1rem);
     font-weight: normal; /* Use normal weight for the light font */
-    line-height: normal;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
     position: relative;
+
   }
 
-  /* Style for the active "HOME" link */
   .navigation .home {
     color: #27C83F; /* Green color */
     font-weight: bold;
   }
 
-  /* Underline Effect */
-  .navigation .home::after {
-    content: "";
-    display: block;
-    width: 3vw;
-    height: 2px;
-    background-color: #27C83F;
-    position: absolute;
-    top: 2.5vh;
-    left: 0;
-  }
-
-  .navigation a.active::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-    
-  .navigation .industriesandpartners {
+  
+  /* .navigation .industriesandpartners {
     position: relative;
-    
-  }
+    top: -1vw;
+  } */
   
   @media (max-width: 600px) {
     .navigation {
@@ -213,69 +197,74 @@
 /* ////////// */
 /* P1 Section */
 /* ////////// */
+/* ---------- p1 Section ---------- */
 .custom-container {
   max-width: 75vw;
 }
 
+.p1container {
+  padding-top: 10rem;
+}
 
-
+.image-container {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
 
 .image-container img {
   width: 100%;
   height: auto;
   display: block;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
 }
 
-.top-left-text{
+/* Keep top-left text absolutely positioned */
+.top-left-text {
   position: absolute;
-  top: 10rem;
+  top: 0;
   left: 30px;
   color: #27C83F;
   padding: 1rem;
   border-radius: 1rem;
 }
 
-.bottom-right-text {
-  font-family: 'HelveticaNeueRegular';
-  position: absolute;
-  bottom: 15rem;
-  right: 50px;
-  padding: 1rem;
-  border-radius: 1rem;
-  text-align: left;
-  font-size: 2rem;
-  font-weight: 400;
-
-}
-
 .top-left-text h2 {
-  font-family: 'HelveticaNeueBold';
+  font-family: 'HelveticaNeueBlack';
   font-size: 4.583rem;
-  margin-bottom: 0.5rem;
-  line-height: 0.95;
+  line-height: 1;
 }
 
-.top-left-text p{
+.top-left-text p {
   font-family: 'HelveticaNeueRegular';
-  font-weight: 400;
+  font-weight: 450;
   color: black;
   margin: 0;
-  width: 354px;
-  font-size:1.25rem;
-  line-height: 26px; letter-spacing: 0.20px; word-wrap: break-word;
-}
-.bottom-right-text p {
-  font-family: 'HelveticaNeueRegular';
-  font-weight: 400;
-  color: white;
-  margin: 0;
-  width: 400px;
-  font-size:1.5rem;
-  line-height: 26px; letter-spacing: 0.20px; word-wrap: break-word;
+  width: 450px;
+  font-size: 1.667rem;
+  line-height: 0.95;
+  letter-spacing: 0.20px;
+  word-wrap: break-word;
 }
 
+/* Bottom-right text: remove absolute positioning */
+.bottom-right-text {
+  font-family: 'HelveticaNeueRegular';
+  color: white;
+  /* You can keep a fixed width if desired, or remove. */
+  width: 400px;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.bottom-right-text p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 26px;
+  letter-spacing: 0.20px;
+  word-wrap: break-word;
+}
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) {
   
@@ -466,7 +455,7 @@
 /* ////////// */
 .top-right-text{
   position: absolute;
-  top: 10rem;
+  top: 0rem;
   right: 0;
   color: #27C83F;
   padding: 1rem;
@@ -482,7 +471,7 @@
 .p4 .bottom-left-text {
   font-family: 'HelveticaNeueRegular';
   position: absolute;
-  bottom: 13rem;
+  bottom: 3rem;
   left: 40px;
   color: white;
   padding: 1rem;
@@ -1246,11 +1235,12 @@
     line-height: 0.95;
   }
 
-  .bottom-right-text{
+  .bottom-right-text {
     position: relative;
-    bottom: 23rem;
-    left: 21rem;
+    bottom: 24rem;
+    left: 38rem;
   }
+  
   .bottom-right-text p{
     font-size: 1.35rem;
   }
@@ -1358,9 +1348,10 @@
   }
 
   .bottom-right-text{
-    position: relative;
+    /* position: relative;
     bottom: 23rem;
-    left: 42rem;
+    left: 42rem; */
+    width: 500px
   }
   .bottom-right-text p{
     font-size: 1.35rem;

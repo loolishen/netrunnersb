@@ -18,8 +18,9 @@
         </div>
         <nav class="navigation">
           <!-- remove netrunnersb before deploy and just use the foldername -->
+            <a href="https://creativeunicorn.com/staging/netrunnersb/bm" class="language">EN&nbsp;|&nbsp;BM</a>
             <a href="https://creativeunicorn.com/staging/netrunnersb" class="home">HOME</a>
-            <a href="https://creativeunicorn.com/staging/netrunnersbabout" class="aboutus">ABOUT&nbsp;US</a> 
+            <a href="https://creativeunicorn.com/staging/netrunnersb/about" class="aboutus">ABOUT&nbsp;US</a> 
             <a href="https://creativeunicorn.com/staging/netrunnersb/digitalpark" class="digitalpark">DIGITAL&nbsp;PARK</a>
             <a href="https://creativeunicorn.com/staging/netrunnersb/industriesandpartners" class="industriesandpartners active">
               INDUSTRIES<br> &amp;&nbsp;PARTNERS
@@ -86,114 +87,296 @@
   <div class="p3">
     <div class="container custom-container py-5">
       <h1 class="text-white">Target Industries</h1>
-    
+  
+      <!-- Desktop carousel (hidden on smaller screens) -->
       <div class="d-none d-md-block">
-        <div id="parkCarousel" class="carousel slide" data-bs-interval="false" data-bs-wrap="false">
+        <div
+          id="parkCarousel"
+          class="carousel slide"
+          data-bs-interval="false"
+          data-bs-wrap="false"
+        >
           <div class="carousel-inner">
-
-      
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
+            <!-- Slide 1: Top-right -->
+            <div class="carousel-item active position-relative">
               <div class="carousel-slide-wrapper center-lines">
-                  <img src="../assets/industriesandpartners/Target Industries-1.png" class="carousel-img" alt="Slide 2">
-                  <div class="text-box top-right">
-                  <div class="title">Data Centers</div>
-                  <div class="desc">
-                      Reliable green energy supply & a robust network infrastructure, so you can scale your operations & maintain optimal uptime with confidence.
-                  </div>
-                  </div>
+                <img
+                  src="../assets/industriesandpartners/Target Industries-1.png"
+                  class="carousel-img"
+                  alt="Slide 1"
+                />
               </div>
-            </div>
-      
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-              <div class="carousel-slide-wrapper center-lines">
-                  <img src="../assets/industriesandpartners/Target Industries-2.png" class="carousel-img" alt="Slide 3">
-                  <div class="text-box bottom-left">
-                  <div class="title">Semiconductor Industry</div>
-                  <div class="desc">
-                      Abundant space, advanced data network, a secure energy supply, smart cooling systems & proximity to digital industry clusters make it an ideal operating environment for production & research facilities.
-                  </div>
-                  </div>
-              </div>
-            </div>
-
-            <!-- Slide 1 -->
-            <div class="carousel-item">
-              <div class="carousel-slide-wrapper center-lines">
-                  <img src="../assets/industriesandpartners/Target Industries-3.png" class="carousel-img" alt="Slide 2">
-                  <div class="text-box top-right">
-                  <div class="title">AI &amp; Big Data</div>
-                  <div class="desc">
-                      A secure & scalable data infrastructure that delivers the high-speed connectivity & low-latency you need to power AI-driven applications, Big Data analytics & machine-learning solutions.
-                  </div>
-                  </div>
-              </div>
-            </div>
-      
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-              <div class="carousel-slide-wrapper center-lines">
-                  <img src="../assets/industriesandpartners/Target Industries-4.png" class="carousel-img" alt="Slide 3">
-                  <div class="text-box bottom-left">
-                  <div class="title">Disaster Recovery</div>
-                  <div class="desc">
-                      Ensure business continuity & minimise disruptions with secure infrastructure for high-speed data storage, seamless connectivity & reliable energy supply.                </div>
-                  </div>
-              </div>
-            </div>
-
-            <!-- Slide 1 -->
-            <div class="carousel-item">
-              <div class="carousel-slide-wrapper center-lines">
-                  <img src="../assets/industriesandpartners/Target Industries-5.png" class="carousel-img" alt="Slide 2">
-                  <div class="text-box top-right">
-                  <div class="title">Managed IT services</div>
-                  <div class="desc">
-                      Deliver 24/7 support & stay responsive with a secure & robust data infrastructure that enables you to keep up with your client’s growth & demands.                </div>
-                  </div>
-              </div>
-            </div>
-      
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-              <div class="carousel-slide-wrapper center-lines">
-                  <img src="../assets/industriesandpartners/Target Industries-6.png" class="carousel-img" alt="Slide 3">
-                  <div class="text-box bottom-left">
-                  <div class="title">Edge Computing</div>
-                  <div class="desc">
-                      With proximity to advanced data centres, deliver solutions efficiently with the advantage of data-processing close-to-source, 
-                      low latency & fast response times within a highly-secure network. 
-                      Collaborate with network providers, manufacturers & system integrators operating in our park eco-system.                
+  
+              <!-- Overlay -->
+              <div
+                class="position-absolute w-100 h-100"
+                style="top: 0; left: 0;"
+              >
+                <div class="container h-100">
+                  <div class="row h-100">
+                    <!-- Empty space first to push text to right -->
+                    <div class="col-md-5"></div>
+                    <div
+                      class="col-md-6 d-flex align-items-start justify-content-end"
+                      style="padding: 1rem;"
+                    >
+                      <div class="text-box">
+                        <div class="title">Data Centers</div>
+                        <div class="desc">
+                          Reliable green energy supply &amp; a robust network
+                          infrastructure, so you can scale your operations &amp;
+                          maintain optimal uptime with confidence.
+                        </div>
                       </div>
+                    </div>
                   </div>
+                </div>
               </div>
             </div>
-
-            <div class="carousel-item">
+  
+            <!-- Slide 2: Bottom-left -->
+            <div class="carousel-item position-relative">
               <div class="carousel-slide-wrapper center-lines">
-                  <img src="../assets/industriesandpartners/Target Industries-7.png" class="carousel-img" alt="Slide 2">
-                  <div class="text-box top-right">
-                  <div class="title">Blockchain &amp; Fintech</div>
-                  <div class="desc">
-                      Enable seamless, real-time, cross-border & cross-intermediary transactions from a secure hub with powerful data storage & processing capabilities.              </div>
+                <img
+                  src="../assets/industriesandpartners/Target Industries-2.png"
+                  class="carousel-img"
+                  alt="Slide 2"
+                />
+              </div>
+  
+              <!-- Overlay -->
+              <div
+                class="position-absolute w-100 h-100"
+                style="top: 0; left: 0;"
+              >
+                <div class="container h-100">
+                  <div class="row h-100">
+                    <!-- Text first to anchor left -->
+                    <div
+                      class="col-md-4 d-flex align-items-end justify-content-start"
+                      style="padding-bottom: 1.5rem; padding-left: 2rem;"
+                    >
+                      <div class="text-box">
+                        <div class="title">Semiconductor Industry</div>
+                        <div class="desc">
+                          Abundant space, advanced data network, a secure energy
+                          supply, smart cooling systems &amp; proximity to digital
+                          industry clusters make it an ideal operating
+                          environment for production &amp; research facilities.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8"></div>
                   </div>
+                </div>
               </div>
             </div>
-      
-      
-          </div>
-      
+  
+            <!-- Slide 3: Top-right -->
+            <div class="carousel-item position-relative">
+              <div class="carousel-slide-wrapper center-lines">
+                <img
+                  src="../assets/industriesandpartners/Target Industries-3.png"
+                  class="carousel-img"
+                  alt="Slide 3"
+                />
+              </div>
+  
+              <!-- Overlay -->
+              <div
+                class="position-absolute w-100 h-100"
+                style="top: 0; left: 0;"
+              >
+                <div class="container h-100">
+                  <div class="row h-100">
+                    <div class="col-md-5"></div>
+                    <div
+                      class="col-md-6 d-flex align-items-start justify-content-end"
+                      style="padding: 1rem;"
+                    >
+                      <div class="text-box">
+                        <div class="title">AI &amp; Big Data</div>
+                        <div class="desc">
+                          A secure &amp; scalable data infrastructure that delivers
+                          the high-speed connectivity &amp; low-latency you need
+                          to power AI-driven applications, Big Data analytics &amp;
+                          machine-learning solutions.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Slide 4: Bottom-left -->
+            <div class="carousel-item position-relative">
+              <div class="carousel-slide-wrapper center-lines">
+                <img
+                  src="../assets/industriesandpartners/Target Industries-4.png"
+                  class="carousel-img"
+                  alt="Slide 4"
+                />
+              </div>
+  
+              <!-- Overlay -->
+              <div
+                class="position-absolute w-100 h-100"
+                style="top: 0; left: 0;"
+              >
+                <div class="container h-100">
+                  <div class="row h-100">
+                    <div
+                      class="col-md-4 d-flex align-items-end justify-content-start"
+                      style="padding-bottom: 1.5rem; padding-left: 2rem;"
+                    >
+                      <div class="text-box">
+                        <div class="title">Disaster Recovery</div>
+                        <div class="desc">
+                          Ensure business continuity &amp; minimise disruptions
+                          with secure infrastructure for high-speed data
+                          storage, seamless connectivity &amp; reliable energy
+                          supply.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Slide 5: Top-right -->
+            <div class="carousel-item position-relative">
+              <div class="carousel-slide-wrapper center-lines">
+                <img
+                  src="../assets/industriesandpartners/Target Industries-5.png"
+                  class="carousel-img"
+                  alt="Slide 5"
+                />
+              </div>
+  
+              <!-- Overlay -->
+              <div
+                class="position-absolute w-100 h-100"
+                style="top: 0; left: 0;"
+              >
+                <div class="container h-100">
+                  <div class="row h-100">
+                    <div class="col-md-5"></div>
+                    <div
+                      class="col-md-7 d-flex align-items-start justify-content-end"
+                      style="padding-top: 1rem;"
+                    >
+                      <div class="text-box">
+                        <div class="title">Managed IT services</div>
+                        <div class="desc">
+                          Deliver 24/7 support &amp; stay responsive with a
+                          secure &amp; robust data infrastructure that enables you
+                          to keep up with your client’s growth &amp; demands.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Slide 6: Bottom-left -->
+            <div class="carousel-item position-relative">
+              <div class="carousel-slide-wrapper center-lines">
+                <img
+                  src="../assets/industriesandpartners/Target Industries-6.png"
+                  class="carousel-img"
+                  alt="Slide 6"
+                />
+              </div>
+  
+              <!-- Overlay -->
+              <div
+                class="position-absolute w-100 h-100"
+                style="top: 0; left: 0;"
+              >
+                <div class="container h-100">
+                  <div class="row h-100">
+                    <div
+                      class="col-md-4 d-flex align-items-end justify-content-start"
+                      style="padding-bottom: 1.5rem; padding-left: 2rem;"
+                    >
+                      <div class="text-box">
+                        <div class="title">Edge Computing</div>
+                        <div class="desc">
+                          With proximity to advanced data centres, deliver
+                          solutions efficiently with the advantage of
+                          data-processing close-to-source, low latency &amp; fast
+                          response times within a highly-secure network.
+                          Collaborate with network providers, manufacturers &amp;
+                          system integrators operating in our park eco-system.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-8"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <!-- Slide 7: Top-right -->
+            <div class="carousel-item position-relative">
+              <div class="carousel-slide-wrapper center-lines">
+                <img
+                  src="../assets/industriesandpartners/Target Industries-7.png"
+                  class="carousel-img"
+                  alt="Slide 7"
+                />
+              </div>
+  
+              <!-- Overlay -->
+              <div
+                class="position-absolute w-100 h-100"
+                style="top: 0; left: 0;"
+              >
+                <div class="container h-100">
+                  <div class="row h-100">
+                    <div class="col-md-4"></div>
+                    <div
+                      class="col-md-8 d-flex align-items-start justify-content-end"
+                      style="padding: 2rem;"
+                    >
+                      <div class="text-box">
+                        <div class="title">Blockchain &amp; Fintech</div>
+                        <div class="desc">
+                          Enable seamless, real-time, cross-border &amp;
+                          cross-intermediary transactions from a secure hub with
+                          powerful data storage &amp; processing capabilities.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .carousel-inner -->
+  
           <!-- Carousel Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#parkCarousel" data-bs-slide="prev">
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#parkCarousel"
+            data-bs-slide="prev"
+          >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#parkCarousel" data-bs-slide="next">
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#parkCarousel"
+            data-bs-slide="next"
+          >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>
-        </div>
-      </div>
-    </div>
+        </div> <!-- #parkCarousel -->
+      </div> <!-- .d-none.d-md-block -->
 
     <div class="d-md-none">
       <div class="mobile-park-list">

@@ -168,77 +168,76 @@
     }
   }
   
-  /* ---------- p1 Section ---------- */
-  .custom-container {
-    max-width: 75vw;
+/* ---------- p1 Section ---------- */
+.custom-container {
+  max-width: 75vw;
+}
 
-  }
-  
-  .p1container{
-    padding-top: 10rem;
-  }
+.p1container {
+  padding-top: 10rem;
+}
 
-  .image-container {
-    position: relative;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    margin-bottom: 5rem;
-  }
+.image-container {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
 
-  .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
-  .top-left-text{
-    position: absolute;
-    top: 0;
-    left: 30px;
-    color: #27C83F;
-    padding: 1rem;
-    border-radius: 1rem;
-    
-  }
+/* Keep top-left text absolutely positioned */
+.top-left-text {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  color: #27C83F;
+  padding: 1rem;
+  border-radius: 1rem;
+}
 
-  .bottom-right-text {
-    font-family: 'HelveticaNeueRegular';
-    position: absolute;
-    bottom: 25px;
-    right: 50px;
-    color: black;
-    padding: 1rem;
-    border-radius: 1rem;
-    text-align: left;
-    font-size: 2rem;
-    font-weight: 400;
+.top-left-text h2 {
+  font-family: 'HelveticaNeueBlack';
+  font-size: 4.583rem;
+  line-height: 1;
+}
 
-  }
+.top-left-text p {
+  font-family: 'HelveticaNeueRegular';
+  font-weight: 450;
+  color: black;
+  margin: 0;
+  width: 450px;
+  font-size: 1.667rem;
+  line-height: 0.95;
+  letter-spacing: 0.20px;
+  word-wrap: break-word;
+}
 
-  .top-left-text h2 {
-    font-family: 'HelveticaNeueBlack';
-    font-size: 4.583rem;
-    line-height: 1;
-  }
+/* Bottom-right text: remove absolute positioning */
+.bottom-right-text {
+  font-family: 'HelveticaNeueRegular';
+  color: black;
+  /* You can keep a fixed width if desired, or remove. */
+  width: 400px;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: left;
+}
 
-  .top-left-text p{
-    font-family: 'HelveticaNeueRegular';
-    font-weight: 450;
-    color: black;
-    margin: 0;
-    width: 450px;
-    font-size:1.667rem;
-    line-height: 0.95; letter-spacing: 0.20px; word-wrap: break-word;
-  }
-  .bottom-right-text p {
-    font-family: 'HelveticaNeueRegular';
-    font-weight: 400;
-    color: black;
-    margin: 0;
-    width: 400px;
-    font-size:1.5rem;
-    line-height: 26px; letter-spacing: 0.20px; word-wrap: break-word;
-  }
+.bottom-right-text p {
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 26px;
+  letter-spacing: 0.20px;
+  word-wrap: break-word;
+}
+
+
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 601px) {
@@ -884,7 +883,7 @@
 @media (min-width: 1024px) and (max-width: 1439px) {
   /* Example: Adjust font size or grid behavior */
   html {
-    font-size: 15px;
+    font-size: 16px;
     overflow-x: hidden;
   }
 
@@ -1014,7 +1013,7 @@
 
 
 /* ========== THIS IS FOR LAPTOP L SIZE ========== */
-@media (min-width: 1440px) and (max-width: 1919px) {
+@media (min-width: 1024px) and (max-width: 1919px) {
   html {
     font-size: 16px;
   }

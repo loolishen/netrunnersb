@@ -14,23 +14,28 @@
 
 <body>
 
-  <header>
+    <header>
     <div class="header-left">
-      <img src="assets/NetRunner-Red-white-text.png" alt="Logo">
+        <img src= "assets/NetRunner-Red-white-text.png">           
     </div>
     <nav class="navigation">
-      <a href="https://creativeunicorn.com/staging/netrunnersb" class="home">HOME</a>
-      <a href="https://creativeunicorn.com/staging/netrunnersbabout" class="aboutus">ABOUT&nbsp;US</a> 
-      <a href="https://creativeunicorn.com/staging/netrunnersb/digitalpark" class="digitalpark">DIGITAL&nbsp;PARK</a>
-      <a href="https://creativeunicorn.com/staging/netrunnersb/industriesandpartners" class="industriesandpartners">
-        INDUSTRIES<br> &amp;&nbsp;PARTNERS
+      <!-- remove netrunnersb before deploy and just use the foldername -->
+      <a href="https://creativeunicorn.com/staging/netrunnersb/bm/" class="language">
+        <span style="color: #27C83F;">EN</span>&nbsp;|&nbsp;BM&nbsp;
       </a>
-      <a href="https://creativeunicorn.com/staging/netrunnersb/contact" class="contact">CONTACT&nbsp;US</a>
+        <a href="https://creativeunicorn.com/staging/netrunnersb/" class="home">HOME</a>
+        <a href="https://creativeunicorn.com/staging/netrunnersb/about" class="aboutus">ABOUT&nbsp;US</a> 
+        <a href="https://creativeunicorn.com/staging/netrunnersb/digitalpark" class="digitalpark active">DIGITAL&nbsp;PARK</a>
+        <a href="https://creativeunicorn.com/staging/netrunnersb/industriesandpartners" class="industriesandpartners">
+          INDUSTRIES<br> &amp;&nbsp;PARTNERS
+        </a>
+        <a href="https://creativeunicorn.com/staging/netrunnersb/contact" class="contact">CONTACT&nbsp;US</a>
+
     </nav>
-    <!-- The burger icon (shown on mobile) -->
     <div class="menu-toggle">&#9776;</div>
-    
-  </header>
+
+      
+</header>
 
   <!-- Fullscreen Overlay (hidden by default) -->
   <div class="navigation-overlay">
@@ -67,29 +72,56 @@
 
 
     <!-- p1 Section -->
+  <!-- p1 Section -->
   <div class="p1">
     <div class="p1container container custom-container my-5">
       <div class="row">
         <div class="col-12">
-          <div class="image-container">
-            <img src="assets/homepage/Subtract P2.png" alt="Feature Image">
-            
-            <!-- Top-left title + paragraph -->
+          <!-- Keep the parent as position: relative so the top-left text can stay absolutely positioned -->
+          <div class="image-container position-relative">
+            <img
+              src="assets/homepage/Subtract P2.png"
+              alt="Feature Image"
+            />
+  
+            <!-- Top-left title + paragraph (unchanged) -->
             <div class="top-left-text">
               <h2>A Collaborative.<br><h2 style="color: black;">Ecosystem for Growth.</h2></h2>
             </div>
-            
-            <!-- Bottom-right paragraph -->
-            <div class="bottom-right-text">
-              <p>We are more than a place to do business and work.
+  
+            <!-- Position a full overlay for the bottom text.
+                 Using Bootstrap grid offsets to push it into the rightmost 4 columns on md+ screens. -->
+            <div 
+              class="position-absolute w-100 h-100" 
+              style="top: 0; left: 0;"
+            >
+              <div class="row h-100">
+                <!-- col-md-8 is empty, pushing the .col-md-4 into the last 4 columns -->
+                <div class="col-md-7"></div>
+  
+                <!-- Bottom-right text in the last 4 columns, aligned at bottom-right -->
+                <div
+                  class="col-md-5 d-flex align-items-end justify-content-end"
+                  style="padding: 2rem;"
+                >
+                  <!-- We wrap your original bottom-right text inside .bottom-right-text -->
+                  <div class="bottom-right-text">
+                    <p>
+                      We are more than a place to do business and work.
                 It is where technology sustainability intersect to shape the future. We foster a vibrant community where businesses, entrepreneurs, and innovators connect, collaborate, and create.
-                </p>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <!-- End of bottom-right text grid overlay -->
+  
+          </div> <!-- .image-container -->
+        </div> <!-- .col-12 -->
+      </div>   <!-- .row -->
+    </div>     <!-- .p1container -->
+  </div>       <!-- .p1 -->
+    
     
   <section class="p3 py-5">
     <div class="container custom-container" style="padding-bottom: 10rem;">
@@ -186,7 +218,7 @@
             <img src="assets/homepage/Rectangle 198-1.png" alt="Card 1" class="p5-card-img">
             <div class="p5-card-content">
               <div class="p5-title">Technology x Sustainability</div>
-              <a href="https://www.netrunner.com/about" class="p5-link">Learn more.</a>
+              <a href="https://creativeunicorn.com/staging/netrunnersb/about" class="p5-link">Learn more.</a>
             </div>
           </div>
         </div>
@@ -197,7 +229,7 @@
             <img src="assets/homepage/Rectangle 198-2.png"" alt="Card 2" class="p5-card-img">
             <div class="p5-card-content">
               <div class="p5-title p5-title2">The Future Is Regenerative</div>
-              <a href="https://www.netrunner.com/digitalpark" class="p5-link">A new generation of digital parks.</a>
+              <a href="https://creativeunicorn.com/staging/netrunnersb/digitalpark" class="p5-link">A new generation of digital parks.</a>
             </div>
           </div>
         </div>
@@ -208,7 +240,7 @@
             <img src="assets/homepage/Rectangle 198-3.png"" alt="Card 3" class="p5-card-img">
             <div class="p5-card-content">
               <div class="p5-title p5-title3" style="top:-21rem;">Build Your Digital Ecosystem Here</div>
-              <a href="https://www.netrunner.com/industriesandpartners" class="p5-link">Industries <br>Strategic partners.</a>
+              <a href="https://creativeunicorn.com/staging/netrunnersb/industriesandpartners" class="p5-link">Industries <br>Strategic partners.</a>
             </div>
           </div>
         </div>

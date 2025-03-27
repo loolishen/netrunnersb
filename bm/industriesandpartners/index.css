@@ -55,93 +55,85 @@
     html, body {
       height: 100%;
     }
-    
-    /* ////////////////// */
-    /* Navigation section */
-    /* ////////////////// */
-    header {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 83vw;
-      padding: 0 10%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 100;
-      overflow-x: hidden;
-    }
-    
-    /* 
-      Assuming a 1920px width, -1.1rem (~17.6px) is roughly 0.9vw.
-      Adjust the value if needed.
-    */
-    .header-left img {
-      position: relative;
-      top: -1vw;
-      height: 50%;
-      width: 50%;
-      right:28%;
-    }
-    
-    .navigation {
-      position: relative;
-      top: -1vw;  /* -1vw approximates the -1.1rem offset */
-      display: flex;
-      flex-wrap: nowrap;
-      /* 3rem ≈ 48px => about 2.5vw on a 1920px width */
-      gap: 2.5vw;
-      left: 8%
-    }
-    
-    .navigation a {
-      font-family: 'HelveticaNeueLight', sans-serif; /* Updated font family */
-      color: black;
-      text-decoration: none;
-      font-size: clamp(0.9rem, 1.333rem, 1.1rem);
-      font-weight: normal; /* Use normal weight for the light font */
-      position: relative;
   
-    }
-  
-    .navigation .industriesandpartners {
-      color: #27C83F; /* Green color */
-      font-weight: bold;
-    }
-  
-    .navigation a.active::after {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #27C83F;
-    }
-    
-    .navigation .industriesandpartners {
-      position: relative;
-      /* -1.3rem (~20.8px) ≈ 1vw */
-      top: -1vw;
-    }
-    
-    @media (max-width: 600px) {
-      .navigation {
-        /* 1rem ≈ 16px → roughly 0.8vw on a 1920px design; adjust if needed */
-        gap: clamp(0.8rem, 1vw, 1rem);
-      }
-      
-      .navigation a {
-        font-size: clamp(0.8rem, 0.9vw, 0.9rem);
-      }
-    }
-
     .container {
         max-width: 75vw !important;
       }
 
       
+  /* ////////////////// */
+  /* Navigation section */
+  /* ////////////////// */
+   header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 83vw;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    overflow-x: hidden;
+  }
+  
+  /* 
+    Assuming a 1920px width, -1.1rem (~17.6px) is roughly 0.9vw.
+    Adjust the value if needed.
+  */
+  .header-left img {
+    position: relative;
+    top: -1vw;
+    height: 50%;
+    width: 50%;
+    right:25%;
+  }
+  
+  .navigation {
+    position: relative;
+    top: -1vw;  /* -1vw approximates the -1.1rem offset */
+    display: flex;
+    flex-wrap: nowrap;
+    /* 3rem ≈ 48px => about 2.5vw on a 1920px width */
+    gap: 2.5vw;
+    left: 8%;
+    text-align:right !important;
+  }
+  .language {
+    white-space: nowrap; /* Force all text inside to remain on one line */
+  }
+  .navigation a {
+    font-family: 'HelveticaNeueLight', sans-serif; /* Updated font family */
+    color: black;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.333rem, 1.1rem);
+    font-weight: normal; /* Use normal weight for the light font */
+    display: inline-block; 
+    text-align: right;
+  }
+  
+  /* Style for the active "HOME" link */
+  .navigation .industriesandpartners {
+    color: #27C83F !important; /* Green color */
+    font-weight: bold;
+  }
+  
+
+
+  
+  @media (max-width: 600px) {
+    .navigation {
+      /* 1rem ≈ 16px → roughly 0.8vw on a 1920px design; adjust if needed */
+      gap: clamp(0.8rem, 1vw, 1rem);
+    }
+    
+    .navigation a {
+      font-size: clamp(0.8rem, 0.9vw, 0.9rem);
+    }
+  }  
+
+
 /* ---------- p1 Section ---------- */
 .p1{
     background-color: white;
@@ -227,163 +219,147 @@
   }
   
   /* ---------- p3 Section ---------- */
-  .p3 {
-    background-color: #27C83F;
-    padding: 5rem 0;
-  }
-  
-  .p3 h1 {
-    font-size: 4.583rem;
-    font-family: 'HelveticaNeueBold', sans-serif;
-    margin-bottom: 5rem;
-  }
-  
-  .text-box .desc {
-    font-size: 1.25rem;
-    line-height: 1;
-  }
-  .text-box.bottom-left {
-    bottom: 4rem;
-    left: 3rem;
-    width: 750px;
-  }
-  
-  .text-box.top-right {
-    top:0rem;
-    right: -17rem;
-    width:750px;
-  }
-  
-  
-  
-  .carousel-inner {
-    width: 75vw;
-    margin: 0 auto;
-  }
-  
-  .carousel-item {
-    position: relative;
-    border-radius: 2rem;
-    overflow: hidden;
-    border: 2px solid #27C83F;
-    height: auto;
-  }
-  
-  .carousel-img {
-    width: 100%;
-    height: auto;
-    border-radius: 4rem;
-    object-fit: cover;
-    background-color: white;
+.p3 {
+  background-color: #27C83F;
+  padding: 5rem 0;
+  margin-bottom: 5rem;
+}
 
-  }
-  
-  .text-box {
-    position: absolute;
-    color: black;
-    padding: 1rem;
-    border-radius: 1rem;
-    max-width: 80%;
-    
-  }
+/* p3 heading */
+.p3 h1 {
+  font-size: 4.583rem;
+  font-family: 'HelveticaNeueBold', sans-serif;
+  margin-bottom: 5rem;
+}
 
-  .text-box.top-right{
-    right: -2rem;
-    top: 4rem;
-  }
-  
-  .text-box.bottom-left{
+/* Carousel container inside p3 */
+.carousel-inner {
+  width: 75vw;
+  margin: 0 auto;
+}
 
-  }
-  
-  .text-box .title {
-    font-family: 'HelveticaNeueBold';
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #27C83F;
-    width: 700px;
-  }
-  
-  .text-box .desc {
-    font-family: 'HelveticaNeueRegular';
-    font-size: 1.75rem;
-    font-weight: 400;
-    color:black;
-    width: 650px;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: auto;
-    height: auto;
-  }
-  
-  .carousel-control-prev {
-    left: 0;
-  }
-  
-  .carousel-control-next {
-    right: 0;
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: white;
-    border-radius: 9999px;
-    padding: 1rem;
-    background-size: 100% 100%;
-    position: relative;
-  }
+/* Each carousel item */
+.carousel-item {
+  position: relative;   /* important for overlay positioning */
+  border-radius: 2rem;
+  overflow: hidden;
+  border: 2px solid #27C83F;
+  height: auto;
+}
 
-  .carousel-control-next-icon {
-    background-color: white;
-    border-radius: 9999px;
-    padding: 1rem;
-    background-size: 100% 100%;
-    right: -2rem;
-    
-  }
-  
-  .carousel-control-prev-icon {
-    background-color: white;
-    border-radius: 9999px;
-    padding: 1rem;
-    background-size: 100% 100%;
-    left: -1rem;
-  }
+/* The main carousel images */
+.carousel-img {
+  width: 100%;
+  height: auto;
+  border-radius: 4rem;
+  object-fit: cover;
+  background-color: white;
 
-  .center-lines {
-    position: relative;
-  }
-  
-  .center-lines::before,
-  .center-lines::after {
-    content: "";
-    position: absolute;
-    background: transparent; /* invisible line */
-    pointer-events: none;
-    z-index: 5;
-  }
-  
-  /* Horizontal line (X axis) */
-  .center-lines::before {
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 1px;
-  }
-  
-  /* Vertical line (Y axis) */
-  .center-lines::after {
-    left: 50%;
-    top: 0;
-    width: 1px;
-    height: 100%;
-  }
+}
+
+/* The text box that overlays each slide
+   We'll place it via Bootstrap .row + flex classes 
+   rather than absolute coords */
+.text-box {
+  color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 80%;
+  /* No longer position: absolute here */
+}
+
+/* Title & description inside text-box */
+.text-box .title {
+  font-family: 'HelveticaNeueBold';
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #27C83F;
+  width: 700px; /* adjust if needed for smaller screens */
+  margin-bottom: 0.5rem;
+}
+
+.text-box .desc {
+  font-family: 'HelveticaNeueRegular';
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: black;
+  width: 550px; /* adjust if needed for smaller screens */
+  line-height: 1;
+}
+
+/* Remove or comment out your old "position: absolute" 
+   rules for .text-box.top-right / .text-box.bottom-left
+   Because the overlay approach handles the alignment now. 
+   e.g.:
+     .text-box.top-right { right: -2rem; top: 4rem; ... } 
+     .text-box.bottom-left { bottom: 4rem; left: 3rem; ... }
+   */
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: auto;
+  height: auto;
+}
+
+.carousel-control-prev {
+  left: 0;
+}
+
+.carousel-control-next {
+  right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 1rem;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.carousel-control-next-icon {
+  right: -2rem;  /* offset horizontally */
+}
+
+.carousel-control-prev-icon {
+  left: -1rem;   /* offset horizontally */
+}
+
+/* The .center-lines element (if you still want “invisible” crosshair lines) */
+.center-lines {
+  position: relative;
+}
+
+.center-lines::before,
+.center-lines::after {
+  content: "";
+  position: absolute;
+  background: transparent; /* invisible line */
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Horizontal line (X axis) */
+.center-lines::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+/* Vertical line (Y axis) */
+.center-lines::after {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
 
 
 /* ----------------- */
@@ -692,7 +668,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 29rem !important;
-    margin-bottom: 0;
+    margin-bottom: 5rem;
   }
 
   .top-left-text {
@@ -880,75 +856,75 @@
     height: 50%;
     width: 12rem;
     right: 50%;
-}
-
-  .navigation {
-    position: relative;
-    align-items: flex-end;
-    display: flex
-;
-    flex-wrap: nowrap;
-    gap: 2.5vw;
-    top: -1.8rem;
-    left: 0rem;
   }
 
-  .industriesandpartners{
-    position: relative;
-    top:0rem !important;
-  }
+    .navigation {
+      position: relative;
+      align-items: flex-end;
+      display: flex
+  ;
+      flex-wrap: nowrap;
+      gap: 2.5vw;
+      top: -1.8rem;
+      left: 0rem;
+    }
 
-  .p3 h1{
-    font-size: 3rem;
-    margin-bottom: 3rem;
-  }
+    .industriesandpartners{
+      position: relative;
+      top:0rem !important;
+    }
 
-  .top-left-text h2{
-    font-size: 2.75rem;
-  }
-  .top-left-text p{
-    font-size: 1.25rem;
-    width: 400px;
-  }
+    .p3 h1{
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
 
-  .text-box .title {
-    font-family: 'HelveticaNeueBold', sans-serif;
-    font-size: 1.667rem;
-    font-weight: 700;
-    color: #27C83F;
+    .top-left-text h2{
+      font-size: 2.75rem;
+    }
+    .top-left-text p{
+      font-size: 1.25rem;
+      width: 400px;
+    }
+
+    .text-box .title {
+      font-family: 'HelveticaNeueBold', sans-serif;
+      font-size: 1.667rem;
+      font-weight: 700;
+      color: #27C83F;
+    }
+    .text-box .desc {
+      font-family: 'HelveticaNeueRegular', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 400;
+      width: 350px;
+    }
+
+    .text-box.bottom-left {
+      bottom: 0rem;
+      left: 2rem;
+      width: 390px;
+    }
+
+    .text-box.top-right {
+      top: 0rem;
+      right: 0rem;
+      width: 390px;
+    }
+
+    .section-title{
+      font-size: 3rem;
+    }
+    .benefit-icon{
+      left: -2.8rem;
+    }
+
+
+
+  .footer img {
+    margin-top: 0rem;
+
   }
-  .text-box .desc {
-    font-family: 'HelveticaNeueRegular', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 400;
-    width: 350px;
-  }
-
-  .text-box.bottom-left {
-    bottom: 0rem;
-    left: 2rem;
-    width: 390px;
-  }
-
-  .text-box.top-right {
-    top: 0rem;
-    right: 0rem;
-    width: 390px;
-  }
-
-  .section-title{
-    font-size: 3rem;
-  }
-  .benefit-icon{
-    left: -2.8rem;
-  }
-
-
-
-.footer img {
-  margin-top: 0rem;
-
-}
 
 }
 
@@ -970,29 +946,24 @@
   .contact-subtext p {
     margin-bottom: 0;
   }
-  
+
   .header-left img {
     position: relative;
     top: -1vw;
     height: 50%;
-    width: 12rem;
-    right: 50%;
-}
-
+    width: 13rem;
+    right: 54%;
+  }
+  
   .navigation {
     position: relative;
     align-items: flex-end;
     display: flex
-;
+  ;
     flex-wrap: nowrap;
     gap: 2.5vw;
-    top: -1.8rem;
-    left: 0rem;
-  }
-
-  .industriesandpartners{
-    position: relative;
-    top:0rem !important;
+    top: -2rem;
+    text-align:right !important;
   }
 
   .top-left-text h2{
@@ -1013,7 +984,7 @@
     font-family: 'HelveticaNeueRegular', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
-    width: 450px;
+    width: 510px;
   }
 
   .text-box.bottom-left {

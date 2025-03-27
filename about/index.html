@@ -19,8 +19,9 @@
     </div>
     <nav class="navigation">
       <!-- remove netrunnersb before deploy and just use the foldername -->
+      <a href="https://creativeunicorn.com/staging/netrunnersb/bm" class="language">EN&nbsp;|&nbsp;BM</a>
         <a href="https://creativeunicorn.com/staging/netrunnersb" class="home">HOME</a>
-        <a href="https://creativeunicorn.com/staging/netrunnersbabout" class="aboutus">ABOUT&nbsp;US</a> 
+        <a href="https://creativeunicorn.com/staging/netrunnersb/about" class="aboutus">ABOUT&nbsp;US</a> 
         <a href="https://creativeunicorn.com/staging/netrunnersb/digitalpark" class="digitalpark">DIGITAL&nbsp;PARK</a>
         <a href="https://creativeunicorn.com/staging/netrunnersb/industriesandpartners" class="industriesandpartners">
           INDUSTRIES<br> &amp;&nbsp;PARTNERS
@@ -49,28 +50,57 @@
 
 
   <!-- p1 Section -->
-  <div class="p1">
-    <div class="p1container container custom-container my-5">
-      <div class="row">
-        <div class="col-12">
-          <div class="image-container">
-            <img src="../assets/about/Subtract-P1.png" alt="Feature Image">
-            
-            <!-- Top-left title + paragraph -->
-            <div class="top-left-text">
-              <h2>Our Story.<br><h2 style="color: black;">Our Vision.</h2></h2>
-              <p>We develop advanced & regenerative digital parks that power the Digital Economy.</p>
-            </div>
-            
-            <!-- Bottom-right paragraph -->
-            <div class="bottom-right-text">
-              <p>Our new generation digital parks are built on the vision of creating a solid & sustainable operational foundation to support a dynamic eco-system of data-driven businesses.</p>
+<div class="p1">
+  <div class="p1container container custom-container my-5">
+    <div class="row">
+      <div class="col-12">
+        <!-- Keep the parent as position: relative so the top-left text can stay absolutely positioned -->
+        <div class="image-container position-relative">
+          <img
+            src="../assets/about/Subtract-P1.png"
+            alt="Feature Image"
+          />
+
+          <!-- Top-left title + paragraph (unchanged) -->
+          <div class="top-left-text">
+            <h2>Our Story.<br><h2 style="color: black;">Our Vision.</h2></h2>
+            <p>We develop advanced &amp; regenerative digital parks that power the Digital Economy.</p>
+          </div>
+
+          <!-- Position a full overlay for the bottom text.
+               Using Bootstrap grid offsets to push it into the rightmost 4 columns on md+ screens. -->
+          <div 
+            class="position-absolute w-100 h-100" 
+            style="top: 0; left: 0;"
+          >
+            <div class="row h-100">
+              <!-- col-md-8 is empty, pushing the .col-md-4 into the last 4 columns -->
+              <div class="col-md-7"></div>
+
+              <!-- Bottom-right text in the last 4 columns, aligned at bottom-right -->
+              <div
+                class="col-md-5 d-flex align-items-end justify-content-end"
+                style="padding: 2rem;"
+              >
+                <!-- We wrap your original bottom-right text inside .bottom-right-text -->
+                <div class="bottom-right-text">
+                  <p>
+                    Our new generation digital parks are built on the vision of
+                    creating a solid &amp; sustainable operational foundation to
+                    support a dynamic eco-system of data-driven businesses.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+          <!-- End of bottom-right text grid overlay -->
+
+        </div> <!-- .image-container -->
+      </div> <!-- .col-12 -->
+    </div>   <!-- .row -->
+  </div>     <!-- .p1container -->
+</div>       <!-- .p1 -->
+
   
   <!-- p2 Section -->
   <div class="p2">

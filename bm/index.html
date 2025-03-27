@@ -20,13 +20,14 @@
       <img src="../assets/NetRunner-Red-white-text.png" alt="Logo">
     </div>
     <nav class="navigation">
+      <a href="https://creativeunicorn.com/staging/netrunnersb/" class="language">EN&nbsp;|<p style="color: #27C83F;">&nbsp;BM</p></a>
       <a href="https://creativeunicorn.com/staging/netrunnersb/bm" class="home">LAMAN UTAMA</a>
       <a href="https://creativeunicorn.com/staging/netrunnersb/bm/about" class="aboutus">MENGENAI KAMI</a> 
       <a href="https://creativeunicorn.com/staging/netrunnersb/bm/digitalpark" class="digitalpark">TAMAN DIGITAL</a>
       <a href="https://creativeunicorn.com/staging/netrunnersb/bm/industriesandpartners" class="industriesandpartners">
         INDUSTRI <br> &amp;&nbsp;RAKAN KONGSI
       </a>
-      <a href="https://creativeunicorn.com/staging/netrunnersb/bm/contact" class="contact">HUBUNGI &nbsp; KAMI</a>
+      <a href="https://creativeunicorn.com/staging/netrunnersb/bm/contact" class="contact">HUBUNGI KAMI</a>
     </nav>
     <!-- The burger icon (shown on mobile) -->
     <div class="menu-toggle">&#9776;</div>
@@ -69,28 +70,55 @@
     </container>
 
 
+
     <!-- p1 Section -->
-  <div class="p1">
-    <div class="p1container container custom-container my-5">
-      <div class="row">
-        <div class="col-12">
-          <div class="image-container">
-            <img src="../assets/homepage/Subtract P2.png" alt="Feature Image">
-            
-            <!-- Top-left title + paragraph -->
-            <div class="top-left-text">
-              <h2>Ekosistem Kolaboratif<br><h2 style="color: black;">Untuk Pertumbuhan.</h2></h2>
-            </div>
-            
-            <!-- Bottom-right paragraph -->
-            <div class="bottom-right-text">
-              <p>Kami bukan sekadar tempat untuk kemajuan perniagaan dan bekerja. Di sinilah teknologi dan pembangunan bersatu untuk membentuk masa depan. Kami memupuk komuniti yang bertenaga di mana perniagaan, usahawan, dan inovator berhubung, bekerjasama, dan mencipta.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="p1">
+      <div class="p1container container custom-container my-5">
+        <div class="row">
+          <div class="col-12">
+            <!-- Keep the parent as position: relative so the top-left text can stay absolutely positioned -->
+            <div class="image-container position-relative">
+              <img
+                src="../assets/homepage/Subtract P2.png"
+                alt="Feature Image"
+              />
+    
+              <!-- Top-left title + paragraph (unchanged) -->
+              <div class="top-left-text">
+                <h2>Ekosistem Kolaboratif<br><h2 style="color: black;">Untuk Pertumbuhan.</h2></h2>
+              </div>
+    
+              <!-- Position a full overlay for the bottom text.
+                   Using Bootstrap grid offsets to push it into the rightmost 4 columns on md+ screens. -->
+              <div 
+                class="position-absolute w-100 h-100" 
+                style="top: 0; left: 0;"
+              >
+                <div class="row h-100">
+                  <!-- col-md-8 is empty, pushing the .col-md-4 into the last 4 columns -->
+                  <div class="col-md-7"></div>
+    
+                  <!-- Bottom-right text in the last 4 columns, aligned at bottom-right -->
+                  <div
+                    class="col-md-5 d-flex align-items-end justify-content-end"
+                    style="padding: 2rem;"
+                  >
+                    <!-- We wrap your original bottom-right text inside .bottom-right-text -->
+                    <div class="bottom-right-text">
+                      <p>
+                        Kami bukan sekadar tempat untuk kemajuan perniagaan dan bekerja. Di sinilah teknologi dan pembangunan bersatu untuk membentuk masa depan. Kami memupuk komuniti yang bertenaga di mana perniagaan, usahawan, dan inovator berhubung, bekerjasama, dan mencipta.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End of bottom-right text grid overlay -->
+    
+            </div> <!-- .image-container -->
+          </div> <!-- .col-12 -->
+        </div>   <!-- .row -->
+      </div>     <!-- .p1container -->
+    </div>    
     
   <section class="p3 py-5">
     <div class="container custom-container" style="padding-bottom: 10rem;">
